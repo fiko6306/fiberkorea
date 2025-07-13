@@ -3,43 +3,80 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Fiber Korea - 전기 & 광섬유 전문</title>
-  <style>
-    body { font-family: 'Noto Sans KR', sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
-    header { background: #004080; color: white; padding: 20px; text-align: center; }
-    main { padding: 20px; max-width: 900px; margin: auto; background: white; }
-    h1 { margin-bottom: 0; }
-    .contact { margin-top: 40px; background: #e0e0e0; padding: 15px; }
-    .contact a { color: #004080; text-decoration: none; font-weight: bold; }
-    img { max-width: 100%; height: auto; }
-    .portfolio img { margin-top: 15px; border: 1px solid #ddd; }
-  </style>
+  <title>FIKO CO.,LTD - 광섬유조명 설계 및 시공</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet" />
 </head>
 <body>
   <header>
-    <h1>Fiber Korea</h1>
-    <p>전기 및 광섬유 시공 전문업체</p>
+    <nav class="navbar">
+      <div class="logo">FIKO CO.,LTD</div>
+      <ul class="menu">
+        <li><a href="#home">홈</a></li>
+        <li><a href="#about">회사소개</a></li>
+        <li><a href="#projects">시공사례</a></li>
+        <li><a href="#contact">문의하기</a></li>
+      </ul>
+    </nav>
   </header>
-  <main>
-    <section>
-      <h2>회사 소개</h2>
-      <p>Fiber Korea는 신뢰와 안전을 최우선으로 하는 전기 및 광섬유 시공 전문업체입니다.</p>
-    </section>
 
-    <section class="portfolio">
-      <h2>시공 사례</h2>
-      <img src="https://via.placeholder.com/600x400?text=시공사진1" alt="시공사진1" />
-      <img src="https://via.placeholder.com/600x400?text=시공사진2" alt="시공사진2" />
-      <img src="https://via.placeholder.com/600x400?text=시공사진3" alt="시공사진3" />
-      <p>더 많은 시공사진은 곧 업데이트 예정입니다.</p>
-    </section>
+  <section id="home" class="banner">
+    <div class="banner-text">
+      <h1>광섬유 조명 설계 및 시공 전문</h1>
+      <p>신뢰와 기술로 함께합니다</p>
+    </div>
+  </section>
 
-    <section class="contact">
-      <h2>견적 문의</h2>
-      <p>전화: <a href="tel:01012345678">010-1234-5678</a></p>
-      <p>이메일: <a href="mailto:contact@fiko.co.kr">contact@fiko.co.kr</a></p>
-      <p>카카오톡: <a href="https://pf.kakao.com/_somechannel" target="_blank">플러스친구 바로가기</a></p>
-    </section>
-  </main>
+  <section id="about" class="company-intro">
+    <h2>회사소개</h2>
+    <p>FIKO CO.,LTD는 광섬유 조명 계통도 및 경관조명 설계와 시공을 전문으로 하는 회사입니다.  
+       신뢰와 기술력을 바탕으로 고객님께 최상의 서비스를 제공합니다.</p>
+    <address>
+      <strong>사무실:</strong> 서울특별시 은평구 갈현동 541-1 건영APT 상가1호<br />
+      <strong>공장:</strong> 경기도 고양시 삼원로63, F408호 고양아크비즈<br />
+      <strong>전화:</strong> 02-385-3003 | <strong>휴대폰:</strong> 010-4924-4265<br />
+      <strong>팩스:</strong> 02-385-3005
+    </address>
+  </section>
+
+  <section id="projects" class="project-gallery">
+    <h2>시공사례</h2>
+    <div class="project-cards">
+      <div class="card">
+        <img src="images/project1.jpg" alt="프로젝트 1" />
+        <h3>프로젝트명 1</h3>
+        <p>광섬유 조명 설치 및 시공 사례입니다.</p>
+      </div>
+      <div class="card">
+        <img src="images/project2.jpg" alt="프로젝트 2" />
+        <h3>프로젝트명 2</h3>
+        <p>경관조명 설계 및 완성 사진입니다.</p>
+      </div>
+      <div class="card">
+        <img src="images/project3.jpg" alt="프로젝트 3" />
+        <h3>프로젝트명 3</h3>
+        <p>실내외 조명 시공 사례입니다.</p>
+      </div>
+      <!-- 사진과 내용은 필요에 따라 추가/수정하세요 -->
+    </div>
+  </section>
+
+  <section id="contact" class="contact-form">
+    <h2>문의하기</h2>
+    <form action="mailto:your-email@example.com" method="post" enctype="text/plain" class="form">
+      <input type="text" name="name" placeholder="이름" required />
+      <input type="tel" name="phone" placeholder="연락처" required />
+      <textarea name="message" placeholder="문의 내용" required></textarea>
+      <button type="submit">전송</button>
+    </form>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <p>© 2025 FIKO CO.,LTD. All rights reserved.</p>
+      <p>사무실: 서울특별시 은평구 갈현동 541-1 건영APT 상가1호 | 공장: 경기도 고양시 삼원로63, F408호 고양아크비즈</p>
+      <p>Tel: 02-385-3003 | Fax: 02-385-3005 | HP: 010-4924-4265 | <a href="http://www.fiko.co.kr" target="_blank" rel="noopener noreferrer">www.fiko.co.kr</a></p>
+    </div>
+  </footer>
 </body>
 </html>

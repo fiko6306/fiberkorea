@@ -1,0 +1,251 @@
+/* 전체 기본 세팅 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+  background-color: #f9fafb;
+  color: #222;
+  line-height: 1.6;
+}
+
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* 네비게이션 바 */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #0a2540; /* 진한 네이비 */
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.menu li a {
+  color: white;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+  color: #56a0d3;
+}
+
+/* 배너 섹션 */
+.banner {
+  background: url('images/banner.jpg') center center/cover no-repeat;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.banner-text h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+.banner-text p {
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+}
+
+/* 회사소개 섹션 */
+.company-intro {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.company-intro h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #0a2540;
+}
+
+.company-intro p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  color: #444;
+}
+
+.company-intro address {
+  font-style: normal;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* 시공사례 섹션 */
+.project-gallery {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.project-gallery h2 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #0a2540;
+}
+
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 25px;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card h3 {
+  padding: 15px 15px 5px 15px;
+  color: #0a2540;
+  font-size: 1.2rem;
+}
+
+.card p {
+  padding: 0 15px 15px 15px;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* 문의하기 섹션 */
+.contact-form {
+  max-width: 600px;
+  margin: 60px auto 80px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.contact-form h2 {
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  color: #0a2540;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 1.8px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+.form input:focus,
+.form textarea:focus {
+  border-color: #56a0d3;
+  outline: none;
+}
+
+.form button {
+  background-color: #0a2540;
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form button:hover {
+  background-color: #00509e;
+}
+
+/* 푸터 */
+footer {
+  background-color: #0a2540;
+  color: white;
+  text-align: center;
+  padding: 20px 30px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+footer a {
+  color: #56a0d3;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .banner {
+    height: 250px;
+  }
+
+  .banner-text h1 {
+    font-size: 2rem;
+  }
+
+  .banner-text p {
+    font-size: 1rem;
+  }
+}
