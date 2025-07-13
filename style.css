@@ -1,145 +1,137 @@
-/* 전체 기본 세팅 */
-* {
+/* 기본 스타일 */
+body, html {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: 'Noto Sans KR', sans-serif;
+  scroll-behavior: smooth;
 }
 
-body {
-  background-color: #f9fafb;
-  color: #222;
-  line-height: 1.6;
-}
-
-a {
-  color: #0066cc;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* 네비게이션 바 */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  background-color: #0a2540; /* 진한 네이비 */
-  color: white;
-  position: sticky;
+header {
+  position: fixed;
   top: 0;
-  z-index: 100;
+  width: 100%;
+  background-color: #001F4D; /* 네이비 */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .logo img {
-  height: 40px;
-  vertical-align: middle;
+  height: 50px;
 }
 
 .menu {
   list-style: none;
   display: flex;
   gap: 25px;
+  margin: 0;
 }
 
 .menu li a {
   color: white;
-  font-weight: 500;
+  text-decoration: none;
+  font-weight: 600;
   font-size: 1rem;
-  transition: color 0.3s ease;
+  padding: 5px 0;
+  position: relative;
 }
 
-.menu li a:hover {
-  color: #56a0d3;
+.menu li a:hover,
+.menu li a.active {
+  border-bottom: 3px solid #F9A825; /* 노란색 하이라이트 */
 }
 
-/* 배너 섹션 */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* 배너 */
 .banner {
+  margin-top: 70px; /* 헤더 높이만큼 마진 */
   width: 100%;
   overflow: hidden;
 }
 
 .banner img.main-banner {
   width: 100%;
-  height: auto;  /* 비율 유지하면서 크기 조절 */
+  height: auto;
   display: block;
 }
 
-.banner-text-below {
-  text-align: center;
-  margin: 20px auto 40px auto;
-  color: #333;  /* 진한 회색 */
-  max-width: 800px;
-  font-family: 'Noto Sans KR', sans-serif;
-}
-
-.banner-text-below h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-.banner-text-below p {
-  font-size: 1.2rem;
-  color: #555;
-}
-
-
-/* 회사소개 섹션 */
+/* 회사소개 */
 .company-intro {
   max-width: 900px;
   margin: 60px auto;
   padding: 0 20px;
-  text-align: center;
+  color: #222;
 }
 
 .company-intro h2 {
-  font-size: 2.2rem;
+  text-align: center;
+  font-size: 2.5rem;
   margin-bottom: 20px;
-  color: #0a2540;
 }
 
-.company-intro p {
-  font-size: 1.1rem;
-  margin-bottom: 25px;
-  color: #444;
-}
-
-.company-intro address {
-  font-style: normal;
-  color: #555;
-  line-height: 1.5;
-}
-
-/* 시공사례 섹션 */
+/* 시공사례 */
 .project-gallery {
   max-width: 1100px;
   margin: 60px auto;
   padding: 0 20px;
+  color: #222;
 }
 
 .project-gallery h2 {
-  font-size: 2.2rem;
-  margin-bottom: 30px;
   text-align: center;
-  color: #0a2540;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
 }
 
 .project-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-  gap: 25px;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .card {
-  background: white;
+  background: #f7f7f7;
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  overflow: hidden;
-  transition: transform 0.3s ease;
-  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 320px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s;
 }
 
 .card:hover {
@@ -150,107 +142,94 @@ a:hover {
   width: 100%;
   height: 180px;
   object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 15px;
 }
 
 .card h3 {
-  padding: 15px 15px 5px 15px;
-  color: #0a2540;
-  font-size: 1.2rem;
+  margin: 0 0 10px 0;
+  font-size: 1.25rem;
+  color: #333;
 }
 
 .card p {
-  padding: 0 15px 15px 15px;
+  font-size: 1rem;
   color: #666;
-  font-size: 0.95rem;
 }
 
-/* 문의하기 섹션 */
+/* 문의하기 */
 .contact-form {
   max-width: 600px;
-  margin: 60px auto 80px;
+  margin: 60px auto 100px auto;
   padding: 0 20px;
-  text-align: center;
+  color: #222;
 }
 
 .contact-form h2 {
-  font-size: 2.2rem;
-  margin-bottom: 25px;
-  color: #0a2540;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
 }
 
-.form input,
-.form textarea {
+.form input, .form textarea {
   width: 100%;
   padding: 12px 15px;
-  margin-bottom: 15px;
-  border: 1.8px solid #ccc;
-  border-radius: 6px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
   font-size: 1rem;
   resize: vertical;
-  transition: border-color 0.3s ease;
-}
-
-.form input:focus,
-.form textarea:focus {
-  border-color: #56a0d3;
-  outline: none;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
 .form button {
-  background-color: #0a2540;
+  width: 100%;
+  padding: 14px 0;
+  background-color: #001F4D;
   color: white;
+  font-size: 1.2rem;
   border: none;
-  padding: 14px 30px;
-  font-size: 1.1rem;
-  font-weight: 700;
   border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s;
 }
 
 .form button:hover {
-  background-color: #00509e;
+  background-color: #F9A825;
+  color: #001F4D;
 }
 
 /* 푸터 */
 footer {
-  background-color: #0a2540;
+  background-color: #001F4D;
   color: white;
+  padding: 40px 20px;
   text-align: center;
-  padding: 20px 30px;
   font-size: 0.9rem;
-  line-height: 1.5;
-}
-
-footer a {
-  color: #56a0d3;
-}
-
-footer a:hover {
-  text-decoration: underline;
+  margin-top: 80px;
 }
 
 /* 반응형 */
 @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    gap: 15px;
-  }
-
   .menu {
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    background-color: #001F4D;
+    height: calc(100vh - 70px);
+    width: 250px;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
+    padding: 40px 20px;
+    transition: right 0.3s ease-in-out;
+    z-index: 999;
   }
 
-  .banner {
-    height: 250px;
+  .menu.active {
+    right: 0;
   }
 
-  .banner-text h1 {
-    font-size: 2rem;
-  }
-
-  .banner-text p {
-    font-size: 1rem;
+  .hamburger {
+    display: flex;
   }
 }

@@ -11,25 +11,25 @@
   <header>
     <nav class="navbar">
       <div class="logo">
-  <img src="images/logo.png" alt="FIKO 로고" height="40" />
-</div>
+        <img src="images/logo.png" alt="FIKO 로고" height="50" />
+      </div>
       <ul class="menu">
-        <li><a href="#home">홈</a></li>
+        <li><a href="#home" class="active">홈</a></li>
         <li><a href="#about">회사소개</a></li>
         <li><a href="#projects">시공사례</a></li>
         <li><a href="#contact">문의하기</a></li>
       </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </nav>
   </header>
 
   <section id="home" class="banner">
-  <img src="images/banner.jpg" alt="회사 배너" class="main-banner" />
-</section>
-
-<section class="banner-text-below">
-  <h1>광섬유 조명 설계 및 시공 전문</h1>
-  <p>신뢰와 기술로 함께합니다</p>
-</section>
+    <img src="images/banner.jpg" alt="회사 배너" class="main-banner" />
+  </section>
 
   <section id="about" class="company-intro">
     <h2>회사소개</h2>
@@ -61,7 +61,6 @@
         <h3>프로젝트명 3</h3>
         <p>실내외 조명 시공 사례입니다.</p>
       </div>
-      <!-- 사진과 내용은 필요에 따라 추가/수정하세요 -->
     </div>
   </section>
 
@@ -82,5 +81,26 @@
       <p>Tel: 02-385-3003 | Fax: 02-385-3005 | HP: 010-4924-4265 | <a href="http://www.fiko.co.kr" target="_blank" rel="noopener noreferrer">www.fiko.co.kr</a></p>
     </div>
   </footer>
+
+  <script>
+    // 부드러운 스크롤
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // 햄버거 메뉴 토글
+    const hamburger = document.querySelector('.hamburger');
+    const menu = document.querySelector('.menu');
+
+    hamburger.addEventListener('click', () => {
+      menu.classList.toggle('active');
+      hamburger.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
