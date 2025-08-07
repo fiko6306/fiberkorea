@@ -1,0 +1,2312 @@
+<!DOCTYPE html><html lang="ko" class="h-full" data-theme="dark"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>FIKO CO.,LTD</title><!-- Noto Sans KR 웹폰트 (한글용) --><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet"><!-- Montserrat 웹폰트 (영문용) --><link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/fiberkorea/_astro/index.B5z78pWb.css"><script type="module" src="/fiberkorea/_astro/hoisted.5DI4EEdl.js"></script></head> <body class="h-full overflow-x-hidden bg-default text-default text-base font-sans selection:bg-secondary selection:text-white" style="font-family: 'Noto Sans KR', 'Montserrat', sans-serif;"> <header id="page-header" class="absolute top-0 z-20 flex w-full items-center justify-between border-b border-transparent px-8 py-4 text-white" data-astro-cid-hpnw4vwy> <a class="flex items-center gap-3 hover:!text-default" href="/" data-astro-cid-hpnw4vwy> <img src="/images/FIKO-Logo.png" alt="FIKO Logo" class="h-10 sm:h-12 object-contain" data-astro-cid-hpnw4vwy> </a> <div data-astro-cid-hpnw4vwy> <div class="flex items-center gap-6" data-astro-cid-hpnw4vwy> <!-- PC용 메뉴 --> <nav class="hidden sm:block" data-astro-cid-hpnw4vwy> <ul class="flex items-center gap-6" data-astro-cid-hpnw4vwy> <li data-astro-cid-hpnw4vwy> <a class="text-sm hover:text-secondary transition" href="https://open.kakao.com/o/XXXXXXX" target="_blank" rel="noopener noreferrer" data-astro-cid-hpnw4vwy> KakaoTalk </a> </li><li data-astro-cid-hpnw4vwy> <a class="text-sm hover:text-secondary transition" href="https://blog.naver.com/fiko" target="_blank" rel="noopener noreferrer" data-astro-cid-hpnw4vwy> Blog </a> </li><li data-astro-cid-hpnw4vwy> <a class="text-sm hover:text-secondary transition" href="https://www.youtube.com/@fiberkorea" target="_blank" rel="noopener noreferrer" data-astro-cid-hpnw4vwy> YouTube </a> </li> </ul> </nav> <!-- 모바일 메뉴 버튼 --> <button id="open-nav-button" type="button" class="btn sm:hidden" aria-label="Navigation" data-astro-cid-hpnw4vwy> <svg width="1em" height="1em" class="size-8" data-astro-cid-hpnw4vwy data-icon="mdi:menu">   <symbol id="ai:mdi:menu" viewBox="0 0 24 24"><path fill="currentColor" d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></symbol><use href="#ai:mdi:menu"></use>  </svg> </button> <!--
+  negative margin is sum of button width (6) and gap size of flex parent (6)
+  TODO don't hardcode these values
+--><button id="theme-switcher" type="button" class="-ml-12 origin-[right_center] scale-0 transition-all duration-500" data-astro-cid-l4aeqea3> <div id="icon-theme-light" data-astro-cid-l4aeqea3> <svg width="1em" height="1em" class="size-6" data-astro-cid-l4aeqea3 data-icon="mdi:white-balance-sunny">   <symbol id="ai:mdi:white-balance-sunny" viewBox="0 0 24 24"><path fill="currentColor" d="m3.55 19.09l1.41 1.41l1.8-1.79l-1.42-1.42M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6s6-2.69 6-6c0-3.32-2.69-6-6-6m8 7h3v-2h-3m-2.76 7.71l1.8 1.79l1.41-1.41l-1.79-1.8M20.45 5l-1.41-1.4l-1.8 1.79l1.42 1.42M13 1h-2v3h2M6.76 5.39L4.96 3.6L3.55 5l1.79 1.81zM1 13h3v-2H1m12 9h-2v3h2"/></symbol><use href="#ai:mdi:white-balance-sunny"></use>  </svg> <span class="sr-only" data-astro-cid-l4aeqea3>Use light theme</span> </div> <div id="icon-theme-dark" class="hidden" data-astro-cid-l4aeqea3> <svg width="1em" height="1em" class="size-6" data-astro-cid-l4aeqea3 data-icon="mdi:weather-night">   <symbol id="ai:mdi:weather-night" viewBox="0 0 24 24"><path fill="currentColor" d="m17.75 4.09l-2.53 1.94l.91 3.06l-2.63-1.81l-2.63 1.81l.91-3.06l-2.53-1.94L12.44 4l1.06-3l1.06 3zm3.5 6.91l-1.64 1.25l.59 1.98l-1.7-1.17l-1.7 1.17l.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85c-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14c.4-.4.82-.76 1.27-1.08c.75-.53 1.93.36 1.85 1.19c-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82c-2.81 3.14-2.7 7.96.31 10.98c3.02 3.01 7.84 3.12 10.98.31"/></symbol><use href="#ai:mdi:weather-night"></use>  </svg> <span class="sr-only" data-astro-cid-l4aeqea3>Use dark theme</span> </div> </button>   </div> <!-- 모바일 메뉴 모달 --> <div id="menu-modal" class="modal hidden" aria-hidden="true" data-astro-cid-hpnw4vwy> <div class="fixed inset-0 bg-default px-8 py-4 text-default" data-astro-cid-hpnw4vwy> <div class="space-y-4" role="dialog" aria-modal="true" data-astro-cid-hpnw4vwy> <header class="text-right" data-astro-cid-hpnw4vwy> <button id="close-nav-button" type="button" class="btn" aria-label="Close navigation" data-astro-cid-hpnw4vwy> <svg width="1em" height="1em" class="size-8" data-astro-cid-hpnw4vwy data-icon="mdi:close">   <symbol id="ai:mdi:close" viewBox="0 0 24 24"><path fill="currentColor" d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12z"/></symbol><use href="#ai:mdi:close"></use>  </svg> </button> </header> <div class="flex justify-center" data-astro-cid-hpnw4vwy> <img src="/images/FIKO-Logo.png" alt="FIKO Logo" class="h-12 object-contain" data-astro-cid-hpnw4vwy> </div> <!-- 모바일 메뉴 항목 --> <nav data-astro-cid-hpnw4vwy> <ul class="flex flex-col" data-astro-cid-hpnw4vwy> <li data-astro-cid-hpnw4vwy> <a class="block py-4 text-center text-xl" href="https://open.kakao.com/o/XXXXXXX" target="_blank" rel="noopener noreferrer" data-astro-cid-hpnw4vwy> KakaoTalk </a> </li><li data-astro-cid-hpnw4vwy> <a class="block py-4 text-center text-xl" href="https://blog.naver.com/fiko" target="_blank" rel="noopener noreferrer" data-astro-cid-hpnw4vwy> Blog </a> </li><li data-astro-cid-hpnw4vwy> <a class="block py-4 text-center text-xl" href="https://www.youtube.com/@fiberkorea" target="_blank" rel="noopener noreferrer" data-astro-cid-hpnw4vwy> YouTube </a> </li> </ul> </nav> </div> </div> </div> </div> </header> <!-- 메뉴 동작 스크립트 -->  <noscript> <style>
+    #open-nav-button {
+      display: none;
+    }
+  </style> </noscript>  <main>   <section class="relative h-screen bg-black text-white overflow-hidden"> <div id="starfield" class="absolute inset-0"> <canvas id="starfield-canvas"></canvas> </div>  <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-6"> <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">
+Light that shapes the space
+</h1> <p class="mt-4 text-lg md:text-xl text-gray-300">
+FIKO는 공간을 설계하는 빛의 기술입니다.
+</p> <div class="mt-8 flex gap-4"> <a href="#about" class="bg-white text-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+About us
+</a> <a href="#projects" class="border border-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-black transition">
+Projects
+</a> </div> </div> <div class="absolute bottom-0 left-0 w-1/2 max-w-xl"> <img src="/fiberkorea/_astro/astronaut.B8IC2jL3_ZgGsaL.webp" srcset="/fiberkorea/_astro/astronaut.B8IC2jL3_z6LNb.webp 450w, /fiberkorea/_astro/astronaut.B8IC2jL3_Zt1R8M.webp 800w" class="w-full h-auto object-contain float-anim" sizes="(min-width: 640px) 50vw, 100vw" loading="eager" alt="A floating astronaut in a space suit" width="1250" height="1160" decoding="async"> </div> </section> <section id="features" class="py-20 bg-white text-black text-center"> <h2 class="text-3xl md:text-4xl font-bold mb-4">What we do</h2> <p class="text-gray-600 mb-12">디자인과 기술을 결합한 조명 솔루션</p> <div class="grid grid-cols-1 md:grid-cols-2 gap-10 px-6 max-w-5xl mx-auto"> <div> <h3 class="text-xl font-semibold">Fiber Lighting</h3> <p class="text-gray-500 mt-2">광섬유 조명 설계 및 시공</p> </div> <div> <h3 class="text-xl font-semibold">Digital Signage</h3> <p class="text-gray-500 mt-2">상황판, 디지털 계통도</p> </div> <div> <h3 class="text-xl font-semibold">Custom Projects</h3> <p class="text-gray-500 mt-2">주문제작 / 전시관 / 테마연출</p> </div> <div> <h3 class="text-xl font-semibold">Maintenance</h3> <p class="text-gray-500 mt-2">유지보수 및 리노베이션</p> </div> </div></section> <section id="about" class="py-16 bg-gray-100 text-gray-800"> <div class="max-w-4xl mx-auto px-6 text-center"> <h2 class="text-3xl font-bold mb-4">About FIKO</h2> <p class="text-gray-700 mb-8">30년 경력의 조명 설계 전문 기업</p> <div class="flex items-center justify-center mb-8"> <div class="text-left text-sm leading-relaxed space-y-3 max-w-md"> <p><strong class="font-semibold">사무실 :</strong> 서울특별시 은평구 갈현동 541-1 건영APT 상가1호</p> <p><strong class="font-semibold">공장 :</strong> 경기도 고양시 삼원로63, F408호 고양아크비즈</p> <p>
+|&nbsp; <strong class="font-semibold">Tel:</strong> 02-385-3003 &nbsp;|&nbsp;
+<strong class="font-semibold">Fax:</strong> 02-385-3005 &nbsp;
+<br>|&nbsp; <strong class="font-semibold">Hp:</strong> 010-4924-4265
+</p> <p> <strong class="font-semibold">Web</strong> <br><a href="http://www.fiko.co.kr" class="text-blue-600 underline hover:text-blue-800">
+www.fiko.co.kr
+<br>https://blog.naver.com/fiko
+<br>www.youtube.com/@fiberkorea
+</a> </p> </div> </div> </div> </section>  <div class="space-y-24 px-8 py-32"> <section id="projects" class="py-20 bg-white text-gray-800"> <div class="max-w-6xl mx-auto px-4"> <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center">Projects</h2> <!-- 카드 2열 구성 --> <div class="grid grid-cols-1 md:grid-cols-2 gap-10"> <!-- Swiper 스타일 --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"><div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden" data-astro-cid-5lkxcdsq> <div class="p-6" data-astro-cid-5lkxcdsq> <h3 class="text-xl font-semibold mb-4" data-astro-cid-5lkxcdsq>녹테마레 미디어아트(여수)</h3> <div class="swiper mySwiper" data-astro-cid-5lkxcdsq> <div class="swiper-wrapper" data-astro-cid-5lkxcdsq> <div class="swiper-slide" key="/images/noctemare_02.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/noctemare_02.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div><div class="swiper-slide" key="/images/noctemare_01.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/noctemare_01.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div><div class="swiper-slide" key="/images/noctemare_03.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/noctemare_03.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div> <div class="swiper-slide" data-astro-cid-5lkxcdsq> <video muted playsinline class="w-full h-full object-contain aspect-[4/3] bg-black rounded-lg" data-astro-cid-5lkxcdsq> <source src="/images/noctemare_video.mp4" type="video/mp4" data-astro-cid-5lkxcdsq>
+Your browser does not support the video tag.
+</video> </div> </div> <!-- 버튼 --> <div class="swiper-button-next" data-astro-cid-5lkxcdsq></div> <div class="swiper-button-prev" data-astro-cid-5lkxcdsq></div> </div> </div> </div> <!-- 우클릭 방지 -->  <script type="module">
+  import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".mySwiper").forEach((el) => {
+      const swiper = new Swiper(el, {
+        loop: false, // ← 문제 생기면 true로 다시
+        navigation: {
+          nextEl: el.querySelector(".swiper-button-next"),
+          prevEl: el.querySelector(".swiper-button-prev"),
+        },
+        speed: 800,
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        allowTouchMove: false, // 휙휙 넘김 방지
+        autoplay: false,
+        observer: true,
+        observeParents: true,
+      });
+
+      const slides = el.querySelectorAll(".swiper-slide");
+
+      let autoplayTimer = null;
+      let currentVideoListeners = null;
+
+      const clearVideoListeners = (video) => {
+        if (!video || !currentVideoListeners) return;
+        video.removeEventListener("canplaythrough", currentVideoListeners.canplaythrough);
+        video.removeEventListener("ended", currentVideoListeners.ended);
+        currentVideoListeners = null;
+      };
+
+      const setAutoplayForSlide = (index) => {
+        clearTimeout(autoplayTimer);
+
+        const slide = slides[index];
+        if (!slide) return;
+
+        const video = slide.querySelector("video");
+
+        if (video) {
+          clearVideoListeners(video);
+
+          video.pause();
+          video.currentTime = 0;
+
+          const onCanPlayThrough = () => {
+            video.play().catch(() => {});
+          };
+
+          const onEnded = () => {
+            swiper.slideNext();
+          };
+
+          video.addEventListener("canplaythrough", onCanPlayThrough, { once: true });
+          video.addEventListener("ended", onEnded, { once: true });
+
+          currentVideoListeners = {
+            canplaythrough: onCanPlayThrough,
+            ended: onEnded,
+          };
+        } else {
+          autoplayTimer = setTimeout(() => {
+            swiper.slideNext();
+          }, 5000);
+        }
+      };
+
+      setAutoplayForSlide(swiper.realIndex);
+
+      swiper.on("slideChange", () => {
+        setAutoplayForSlide(swiper.realIndex);
+      });
+    });
+  });
+</script> <!-- Swiper 스타일 --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"><div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden" data-astro-cid-5lkxcdsq> <div class="p-6" data-astro-cid-5lkxcdsq> <h3 class="text-xl font-semibold mb-4" data-astro-cid-5lkxcdsq>Lotteworldtower swarovski</h3> <div class="swiper mySwiper" data-astro-cid-5lkxcdsq> <div class="swiper-wrapper" data-astro-cid-5lkxcdsq> <div class="swiper-slide" key="/images/lotteworldtower_swarovski_01.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/lotteworldtower_swarovski_01.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div><div class="swiper-slide" key="/images/lotteworldtower_swarovski_02.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/lotteworldtower_swarovski_02.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div><div class="swiper-slide" key="/images/lotteworldtower_swarovski_03.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/lotteworldtower_swarovski_03.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div><div class="swiper-slide" key="/images/lotteworldtower_swarovski_04.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/lotteworldtower_swarovski_04.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div><div class="swiper-slide" key="/images/lotteworldtower_swarovski_05.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/lotteworldtower_swarovski_05.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div><div class="swiper-slide" key="/images/lotteworldtower_swarovski_06.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/lotteworldtower_swarovski_06.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div><div class="swiper-slide" key="/images/lotteworldtower_swarovski_07.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/lotteworldtower_swarovski_07.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div><div class="swiper-slide" key="/images/lotteworldtower_swarovski_08.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/lotteworldtower_swarovski_08.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div><div class="swiper-slide" key="/images/lotteworldtower_swarovski_09.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/lotteworldtower_swarovski_09.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div>  </div> <!-- 버튼 --> <div class="swiper-button-next" data-astro-cid-5lkxcdsq></div> <div class="swiper-button-prev" data-astro-cid-5lkxcdsq></div> </div> </div> </div> <!-- 우클릭 방지 -->  <script type="module">
+  import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".mySwiper").forEach((el) => {
+      const swiper = new Swiper(el, {
+        loop: false, // ← 문제 생기면 true로 다시
+        navigation: {
+          nextEl: el.querySelector(".swiper-button-next"),
+          prevEl: el.querySelector(".swiper-button-prev"),
+        },
+        speed: 800,
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        allowTouchMove: false, // 휙휙 넘김 방지
+        autoplay: false,
+        observer: true,
+        observeParents: true,
+      });
+
+      const slides = el.querySelectorAll(".swiper-slide");
+
+      let autoplayTimer = null;
+      let currentVideoListeners = null;
+
+      const clearVideoListeners = (video) => {
+        if (!video || !currentVideoListeners) return;
+        video.removeEventListener("canplaythrough", currentVideoListeners.canplaythrough);
+        video.removeEventListener("ended", currentVideoListeners.ended);
+        currentVideoListeners = null;
+      };
+
+      const setAutoplayForSlide = (index) => {
+        clearTimeout(autoplayTimer);
+
+        const slide = slides[index];
+        if (!slide) return;
+
+        const video = slide.querySelector("video");
+
+        if (video) {
+          clearVideoListeners(video);
+
+          video.pause();
+          video.currentTime = 0;
+
+          const onCanPlayThrough = () => {
+            video.play().catch(() => {});
+          };
+
+          const onEnded = () => {
+            swiper.slideNext();
+          };
+
+          video.addEventListener("canplaythrough", onCanPlayThrough, { once: true });
+          video.addEventListener("ended", onEnded, { once: true });
+
+          currentVideoListeners = {
+            canplaythrough: onCanPlayThrough,
+            ended: onEnded,
+          };
+        } else {
+          autoplayTimer = setTimeout(() => {
+            swiper.slideNext();
+          }, 5000);
+        }
+      };
+
+      setAutoplayForSlide(swiper.realIndex);
+
+      swiper.on("slideChange", () => {
+        setAutoplayForSlide(swiper.realIndex);
+      });
+    });
+  });
+</script> <!-- Swiper 스타일 --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"><div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden" data-astro-cid-5lkxcdsq> <div class="p-6" data-astro-cid-5lkxcdsq> <h3 class="text-xl font-semibold mb-4" data-astro-cid-5lkxcdsq>Cocktail Bar(부천)</h3> <div class="swiper mySwiper" data-astro-cid-5lkxcdsq> <div class="swiper-wrapper" data-astro-cid-5lkxcdsq> <div class="swiper-slide" key="/images/bucheon_cocktail_01.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/bucheon_cocktail_01.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div><div class="swiper-slide" key="/images/bucheon_cocktail_03.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/bucheon_cocktail_03.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div><div class="swiper-slide" key="/images/bucheon_cocktail_02.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/bucheon_cocktail_02.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div> <div class="swiper-slide" data-astro-cid-5lkxcdsq> <video muted playsinline class="w-full h-full object-contain aspect-[4/3] bg-black rounded-lg" data-astro-cid-5lkxcdsq> <source src="/images/bucheon_cocktail_video_02.mp4" type="video/mp4" data-astro-cid-5lkxcdsq>
+Your browser does not support the video tag.
+</video> </div> </div> <!-- 버튼 --> <div class="swiper-button-next" data-astro-cid-5lkxcdsq></div> <div class="swiper-button-prev" data-astro-cid-5lkxcdsq></div> </div> </div> </div> <!-- 우클릭 방지 -->  <script type="module">
+  import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".mySwiper").forEach((el) => {
+      const swiper = new Swiper(el, {
+        loop: false, // ← 문제 생기면 true로 다시
+        navigation: {
+          nextEl: el.querySelector(".swiper-button-next"),
+          prevEl: el.querySelector(".swiper-button-prev"),
+        },
+        speed: 800,
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        allowTouchMove: false, // 휙휙 넘김 방지
+        autoplay: false,
+        observer: true,
+        observeParents: true,
+      });
+
+      const slides = el.querySelectorAll(".swiper-slide");
+
+      let autoplayTimer = null;
+      let currentVideoListeners = null;
+
+      const clearVideoListeners = (video) => {
+        if (!video || !currentVideoListeners) return;
+        video.removeEventListener("canplaythrough", currentVideoListeners.canplaythrough);
+        video.removeEventListener("ended", currentVideoListeners.ended);
+        currentVideoListeners = null;
+      };
+
+      const setAutoplayForSlide = (index) => {
+        clearTimeout(autoplayTimer);
+
+        const slide = slides[index];
+        if (!slide) return;
+
+        const video = slide.querySelector("video");
+
+        if (video) {
+          clearVideoListeners(video);
+
+          video.pause();
+          video.currentTime = 0;
+
+          const onCanPlayThrough = () => {
+            video.play().catch(() => {});
+          };
+
+          const onEnded = () => {
+            swiper.slideNext();
+          };
+
+          video.addEventListener("canplaythrough", onCanPlayThrough, { once: true });
+          video.addEventListener("ended", onEnded, { once: true });
+
+          currentVideoListeners = {
+            canplaythrough: onCanPlayThrough,
+            ended: onEnded,
+          };
+        } else {
+          autoplayTimer = setTimeout(() => {
+            swiper.slideNext();
+          }, 5000);
+        }
+      };
+
+      setAutoplayForSlide(swiper.realIndex);
+
+      swiper.on("slideChange", () => {
+        setAutoplayForSlide(swiper.realIndex);
+      });
+    });
+  });
+</script> <!-- Swiper 스타일 --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"><div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden" data-astro-cid-5lkxcdsq> <div class="p-6" data-astro-cid-5lkxcdsq> <h3 class="text-xl font-semibold mb-4" data-astro-cid-5lkxcdsq>J.Fla-The Hare MV</h3> <div class="swiper mySwiper" data-astro-cid-5lkxcdsq> <div class="swiper-wrapper" data-astro-cid-5lkxcdsq> <div class="swiper-slide" key="/images/jfla_stage_01.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/jfla_stage_01.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div><div class="swiper-slide" key="/images/jfla_stage_02.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/jfla_stage_02.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div><div class="swiper-slide" key="/images/jfla_stage_04.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/jfla_stage_04.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div><div class="swiper-slide" key="/images/jfla_stage_07.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/jfla_stage_07.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div><div class="swiper-slide" key="/images/jfla_stage_06.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/jfla_stage_06.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div>  </div> <!-- 버튼 --> <div class="swiper-button-next" data-astro-cid-5lkxcdsq></div> <div class="swiper-button-prev" data-astro-cid-5lkxcdsq></div> </div> </div> </div> <!-- 우클릭 방지 -->  <script type="module">
+  import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".mySwiper").forEach((el) => {
+      const swiper = new Swiper(el, {
+        loop: false, // ← 문제 생기면 true로 다시
+        navigation: {
+          nextEl: el.querySelector(".swiper-button-next"),
+          prevEl: el.querySelector(".swiper-button-prev"),
+        },
+        speed: 800,
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        allowTouchMove: false, // 휙휙 넘김 방지
+        autoplay: false,
+        observer: true,
+        observeParents: true,
+      });
+
+      const slides = el.querySelectorAll(".swiper-slide");
+
+      let autoplayTimer = null;
+      let currentVideoListeners = null;
+
+      const clearVideoListeners = (video) => {
+        if (!video || !currentVideoListeners) return;
+        video.removeEventListener("canplaythrough", currentVideoListeners.canplaythrough);
+        video.removeEventListener("ended", currentVideoListeners.ended);
+        currentVideoListeners = null;
+      };
+
+      const setAutoplayForSlide = (index) => {
+        clearTimeout(autoplayTimer);
+
+        const slide = slides[index];
+        if (!slide) return;
+
+        const video = slide.querySelector("video");
+
+        if (video) {
+          clearVideoListeners(video);
+
+          video.pause();
+          video.currentTime = 0;
+
+          const onCanPlayThrough = () => {
+            video.play().catch(() => {});
+          };
+
+          const onEnded = () => {
+            swiper.slideNext();
+          };
+
+          video.addEventListener("canplaythrough", onCanPlayThrough, { once: true });
+          video.addEventListener("ended", onEnded, { once: true });
+
+          currentVideoListeners = {
+            canplaythrough: onCanPlayThrough,
+            ended: onEnded,
+          };
+        } else {
+          autoplayTimer = setTimeout(() => {
+            swiper.slideNext();
+          }, 5000);
+        }
+      };
+
+      setAutoplayForSlide(swiper.realIndex);
+
+      swiper.on("slideChange", () => {
+        setAutoplayForSlide(swiper.realIndex);
+      });
+    });
+  });
+</script> <!-- Swiper 스타일 --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"><div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden" data-astro-cid-5lkxcdsq> <div class="p-6" data-astro-cid-5lkxcdsq> <h3 class="text-xl font-semibold mb-4" data-astro-cid-5lkxcdsq>Outback 아웃백</h3> <div class="swiper mySwiper" data-astro-cid-5lkxcdsq> <div class="swiper-wrapper" data-astro-cid-5lkxcdsq> <div class="swiper-slide" key="/images/outback_02.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/outback_02.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div><div class="swiper-slide" key="/images/outback_01.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/outback_01.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div>  </div> <!-- 버튼 --> <div class="swiper-button-next" data-astro-cid-5lkxcdsq></div> <div class="swiper-button-prev" data-astro-cid-5lkxcdsq></div> </div> </div> </div> <!-- 우클릭 방지 -->  <script type="module">
+  import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".mySwiper").forEach((el) => {
+      const swiper = new Swiper(el, {
+        loop: false, // ← 문제 생기면 true로 다시
+        navigation: {
+          nextEl: el.querySelector(".swiper-button-next"),
+          prevEl: el.querySelector(".swiper-button-prev"),
+        },
+        speed: 800,
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        allowTouchMove: false, // 휙휙 넘김 방지
+        autoplay: false,
+        observer: true,
+        observeParents: true,
+      });
+
+      const slides = el.querySelectorAll(".swiper-slide");
+
+      let autoplayTimer = null;
+      let currentVideoListeners = null;
+
+      const clearVideoListeners = (video) => {
+        if (!video || !currentVideoListeners) return;
+        video.removeEventListener("canplaythrough", currentVideoListeners.canplaythrough);
+        video.removeEventListener("ended", currentVideoListeners.ended);
+        currentVideoListeners = null;
+      };
+
+      const setAutoplayForSlide = (index) => {
+        clearTimeout(autoplayTimer);
+
+        const slide = slides[index];
+        if (!slide) return;
+
+        const video = slide.querySelector("video");
+
+        if (video) {
+          clearVideoListeners(video);
+
+          video.pause();
+          video.currentTime = 0;
+
+          const onCanPlayThrough = () => {
+            video.play().catch(() => {});
+          };
+
+          const onEnded = () => {
+            swiper.slideNext();
+          };
+
+          video.addEventListener("canplaythrough", onCanPlayThrough, { once: true });
+          video.addEventListener("ended", onEnded, { once: true });
+
+          currentVideoListeners = {
+            canplaythrough: onCanPlayThrough,
+            ended: onEnded,
+          };
+        } else {
+          autoplayTimer = setTimeout(() => {
+            swiper.slideNext();
+          }, 5000);
+        }
+      };
+
+      setAutoplayForSlide(swiper.realIndex);
+
+      swiper.on("slideChange", () => {
+        setAutoplayForSlide(swiper.realIndex);
+      });
+    });
+  });
+</script> <!-- Swiper 스타일 --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"><div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden" data-astro-cid-5lkxcdsq> <div class="p-6" data-astro-cid-5lkxcdsq> <h3 class="text-xl font-semibold mb-4" data-astro-cid-5lkxcdsq>별마로 천문대(영월)</h3> <div class="swiper mySwiper" data-astro-cid-5lkxcdsq> <div class="swiper-wrapper" data-astro-cid-5lkxcdsq>  <div class="swiper-slide" data-astro-cid-5lkxcdsq> <video muted playsinline class="w-full h-full object-contain aspect-[4/3] bg-black rounded-lg" data-astro-cid-5lkxcdsq> <source src="/images/yeongwol_astronomy_video.mp4" type="video/mp4" data-astro-cid-5lkxcdsq>
+Your browser does not support the video tag.
+</video> </div> </div> <!-- 버튼 --> <div class="swiper-button-next" data-astro-cid-5lkxcdsq></div> <div class="swiper-button-prev" data-astro-cid-5lkxcdsq></div> </div> </div> </div> <!-- 우클릭 방지 -->  <script type="module">
+  import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".mySwiper").forEach((el) => {
+      const swiper = new Swiper(el, {
+        loop: false, // ← 문제 생기면 true로 다시
+        navigation: {
+          nextEl: el.querySelector(".swiper-button-next"),
+          prevEl: el.querySelector(".swiper-button-prev"),
+        },
+        speed: 800,
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        allowTouchMove: false, // 휙휙 넘김 방지
+        autoplay: false,
+        observer: true,
+        observeParents: true,
+      });
+
+      const slides = el.querySelectorAll(".swiper-slide");
+
+      let autoplayTimer = null;
+      let currentVideoListeners = null;
+
+      const clearVideoListeners = (video) => {
+        if (!video || !currentVideoListeners) return;
+        video.removeEventListener("canplaythrough", currentVideoListeners.canplaythrough);
+        video.removeEventListener("ended", currentVideoListeners.ended);
+        currentVideoListeners = null;
+      };
+
+      const setAutoplayForSlide = (index) => {
+        clearTimeout(autoplayTimer);
+
+        const slide = slides[index];
+        if (!slide) return;
+
+        const video = slide.querySelector("video");
+
+        if (video) {
+          clearVideoListeners(video);
+
+          video.pause();
+          video.currentTime = 0;
+
+          const onCanPlayThrough = () => {
+            video.play().catch(() => {});
+          };
+
+          const onEnded = () => {
+            swiper.slideNext();
+          };
+
+          video.addEventListener("canplaythrough", onCanPlayThrough, { once: true });
+          video.addEventListener("ended", onEnded, { once: true });
+
+          currentVideoListeners = {
+            canplaythrough: onCanPlayThrough,
+            ended: onEnded,
+          };
+        } else {
+          autoplayTimer = setTimeout(() => {
+            swiper.slideNext();
+          }, 5000);
+        }
+      };
+
+      setAutoplayForSlide(swiper.realIndex);
+
+      swiper.on("slideChange", () => {
+        setAutoplayForSlide(swiper.realIndex);
+      });
+    });
+  });
+</script> <!-- Swiper 스타일 --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"><div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden" data-astro-cid-5lkxcdsq> <div class="p-6" data-astro-cid-5lkxcdsq> <h3 class="text-xl font-semibold mb-4" data-astro-cid-5lkxcdsq>심리치료실 스누젤렌(부천)</h3> <div class="swiper mySwiper" data-astro-cid-5lkxcdsq> <div class="swiper-wrapper" data-astro-cid-5lkxcdsq> <div class="swiper-slide" key="/images/bupyeong_therapy_02.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/bupyeong_therapy_02.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div><div class="swiper-slide" key="/images/bupyeong_therapy_01.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/bupyeong_therapy_01.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div><div class="swiper-slide" key="/images/bupyeong_therapy_04.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/bupyeong_therapy_04.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div><div class="swiper-slide" key="/images/bupyeong_therapy_03.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/bupyeong_therapy_03.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div>  </div> <!-- 버튼 --> <div class="swiper-button-next" data-astro-cid-5lkxcdsq></div> <div class="swiper-button-prev" data-astro-cid-5lkxcdsq></div> </div> </div> </div> <!-- 우클릭 방지 -->  <script type="module">
+  import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".mySwiper").forEach((el) => {
+      const swiper = new Swiper(el, {
+        loop: false, // ← 문제 생기면 true로 다시
+        navigation: {
+          nextEl: el.querySelector(".swiper-button-next"),
+          prevEl: el.querySelector(".swiper-button-prev"),
+        },
+        speed: 800,
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        allowTouchMove: false, // 휙휙 넘김 방지
+        autoplay: false,
+        observer: true,
+        observeParents: true,
+      });
+
+      const slides = el.querySelectorAll(".swiper-slide");
+
+      let autoplayTimer = null;
+      let currentVideoListeners = null;
+
+      const clearVideoListeners = (video) => {
+        if (!video || !currentVideoListeners) return;
+        video.removeEventListener("canplaythrough", currentVideoListeners.canplaythrough);
+        video.removeEventListener("ended", currentVideoListeners.ended);
+        currentVideoListeners = null;
+      };
+
+      const setAutoplayForSlide = (index) => {
+        clearTimeout(autoplayTimer);
+
+        const slide = slides[index];
+        if (!slide) return;
+
+        const video = slide.querySelector("video");
+
+        if (video) {
+          clearVideoListeners(video);
+
+          video.pause();
+          video.currentTime = 0;
+
+          const onCanPlayThrough = () => {
+            video.play().catch(() => {});
+          };
+
+          const onEnded = () => {
+            swiper.slideNext();
+          };
+
+          video.addEventListener("canplaythrough", onCanPlayThrough, { once: true });
+          video.addEventListener("ended", onEnded, { once: true });
+
+          currentVideoListeners = {
+            canplaythrough: onCanPlayThrough,
+            ended: onEnded,
+          };
+        } else {
+          autoplayTimer = setTimeout(() => {
+            swiper.slideNext();
+          }, 5000);
+        }
+      };
+
+      setAutoplayForSlide(swiper.realIndex);
+
+      swiper.on("slideChange", () => {
+        setAutoplayForSlide(swiper.realIndex);
+      });
+    });
+  });
+</script> <!-- Swiper 스타일 --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"><div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden" data-astro-cid-5lkxcdsq> <div class="p-6" data-astro-cid-5lkxcdsq> <h3 class="text-xl font-semibold mb-4" data-astro-cid-5lkxcdsq>심리치료실 스누젤렌(부산)</h3> <div class="swiper mySwiper" data-astro-cid-5lkxcdsq> <div class="swiper-wrapper" data-astro-cid-5lkxcdsq> <div class="swiper-slide" key="/images/busan_snoezelen_therapyroom_04.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/busan_snoezelen_therapyroom_04.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div><div class="swiper-slide" key="/images/busan_snoezelen_therapyroom_05.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/busan_snoezelen_therapyroom_05.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div><div class="swiper-slide" key="/images/busan_snoezelen_therapyroom_06.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/busan_snoezelen_therapyroom_06.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div><div class="swiper-slide" key="/images/busan_snoezelen_therapyroom_07.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/busan_snoezelen_therapyroom_07.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div><div class="swiper-slide" key="/images/busan_snoezelen_therapyroom_08.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/busan_snoezelen_therapyroom_08.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div><div class="swiper-slide" key="/images/busan_snoezelen_therapyroom_03.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/busan_snoezelen_therapyroom_03.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div><div class="swiper-slide" key="/images/busan_snoezelen_therapyroom_02.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/busan_snoezelen_therapyroom_02.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div><div class="swiper-slide" key="/images/busan_snoezelen_therapyroom_01.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/busan_snoezelen_therapyroom_01.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div> <div class="swiper-slide" data-astro-cid-5lkxcdsq> <video muted playsinline class="w-full h-full object-contain aspect-[4/3] bg-black rounded-lg" data-astro-cid-5lkxcdsq> <source src="/images/therapy_room_video.mp4" type="video/mp4" data-astro-cid-5lkxcdsq>
+Your browser does not support the video tag.
+</video> </div> </div> <!-- 버튼 --> <div class="swiper-button-next" data-astro-cid-5lkxcdsq></div> <div class="swiper-button-prev" data-astro-cid-5lkxcdsq></div> </div> </div> </div> <!-- 우클릭 방지 -->  <script type="module">
+  import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".mySwiper").forEach((el) => {
+      const swiper = new Swiper(el, {
+        loop: false, // ← 문제 생기면 true로 다시
+        navigation: {
+          nextEl: el.querySelector(".swiper-button-next"),
+          prevEl: el.querySelector(".swiper-button-prev"),
+        },
+        speed: 800,
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        allowTouchMove: false, // 휙휙 넘김 방지
+        autoplay: false,
+        observer: true,
+        observeParents: true,
+      });
+
+      const slides = el.querySelectorAll(".swiper-slide");
+
+      let autoplayTimer = null;
+      let currentVideoListeners = null;
+
+      const clearVideoListeners = (video) => {
+        if (!video || !currentVideoListeners) return;
+        video.removeEventListener("canplaythrough", currentVideoListeners.canplaythrough);
+        video.removeEventListener("ended", currentVideoListeners.ended);
+        currentVideoListeners = null;
+      };
+
+      const setAutoplayForSlide = (index) => {
+        clearTimeout(autoplayTimer);
+
+        const slide = slides[index];
+        if (!slide) return;
+
+        const video = slide.querySelector("video");
+
+        if (video) {
+          clearVideoListeners(video);
+
+          video.pause();
+          video.currentTime = 0;
+
+          const onCanPlayThrough = () => {
+            video.play().catch(() => {});
+          };
+
+          const onEnded = () => {
+            swiper.slideNext();
+          };
+
+          video.addEventListener("canplaythrough", onCanPlayThrough, { once: true });
+          video.addEventListener("ended", onEnded, { once: true });
+
+          currentVideoListeners = {
+            canplaythrough: onCanPlayThrough,
+            ended: onEnded,
+          };
+        } else {
+          autoplayTimer = setTimeout(() => {
+            swiper.slideNext();
+          }, 5000);
+        }
+      };
+
+      setAutoplayForSlide(swiper.realIndex);
+
+      swiper.on("slideChange", () => {
+        setAutoplayForSlide(swiper.realIndex);
+      });
+    });
+  });
+</script> <!-- Swiper 스타일 --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"><div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden" data-astro-cid-5lkxcdsq> <div class="p-6" data-astro-cid-5lkxcdsq> <h3 class="text-xl font-semibold mb-4" data-astro-cid-5lkxcdsq>Lotteworldtower 잔디광장</h3> <div class="swiper mySwiper" data-astro-cid-5lkxcdsq> <div class="swiper-wrapper" data-astro-cid-5lkxcdsq> <div class="swiper-slide" key="/images/grass_field_01.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/grass_field_01.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div><div class="swiper-slide" key="/images/grass_field_02.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/grass_field_02.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div> <div class="swiper-slide" data-astro-cid-5lkxcdsq> <video muted playsinline class="w-full h-full object-contain aspect-[4/3] bg-black rounded-lg" data-astro-cid-5lkxcdsq> <source src="/images/lawn_plaza_video.mp4" type="video/mp4" data-astro-cid-5lkxcdsq>
+Your browser does not support the video tag.
+</video> </div> </div> <!-- 버튼 --> <div class="swiper-button-next" data-astro-cid-5lkxcdsq></div> <div class="swiper-button-prev" data-astro-cid-5lkxcdsq></div> </div> </div> </div> <!-- 우클릭 방지 -->  <script type="module">
+  import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".mySwiper").forEach((el) => {
+      const swiper = new Swiper(el, {
+        loop: false, // ← 문제 생기면 true로 다시
+        navigation: {
+          nextEl: el.querySelector(".swiper-button-next"),
+          prevEl: el.querySelector(".swiper-button-prev"),
+        },
+        speed: 800,
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        allowTouchMove: false, // 휙휙 넘김 방지
+        autoplay: false,
+        observer: true,
+        observeParents: true,
+      });
+
+      const slides = el.querySelectorAll(".swiper-slide");
+
+      let autoplayTimer = null;
+      let currentVideoListeners = null;
+
+      const clearVideoListeners = (video) => {
+        if (!video || !currentVideoListeners) return;
+        video.removeEventListener("canplaythrough", currentVideoListeners.canplaythrough);
+        video.removeEventListener("ended", currentVideoListeners.ended);
+        currentVideoListeners = null;
+      };
+
+      const setAutoplayForSlide = (index) => {
+        clearTimeout(autoplayTimer);
+
+        const slide = slides[index];
+        if (!slide) return;
+
+        const video = slide.querySelector("video");
+
+        if (video) {
+          clearVideoListeners(video);
+
+          video.pause();
+          video.currentTime = 0;
+
+          const onCanPlayThrough = () => {
+            video.play().catch(() => {});
+          };
+
+          const onEnded = () => {
+            swiper.slideNext();
+          };
+
+          video.addEventListener("canplaythrough", onCanPlayThrough, { once: true });
+          video.addEventListener("ended", onEnded, { once: true });
+
+          currentVideoListeners = {
+            canplaythrough: onCanPlayThrough,
+            ended: onEnded,
+          };
+        } else {
+          autoplayTimer = setTimeout(() => {
+            swiper.slideNext();
+          }, 5000);
+        }
+      };
+
+      setAutoplayForSlide(swiper.realIndex);
+
+      swiper.on("slideChange", () => {
+        setAutoplayForSlide(swiper.realIndex);
+      });
+    });
+  });
+</script> <!-- Swiper 스타일 --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"><div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden" data-astro-cid-5lkxcdsq> <div class="p-6" data-astro-cid-5lkxcdsq> <h3 class="text-xl font-semibold mb-4" data-astro-cid-5lkxcdsq>아이사랑꿈터</h3> <div class="swiper mySwiper" data-astro-cid-5lkxcdsq> <div class="swiper-wrapper" data-astro-cid-5lkxcdsq> <div class="swiper-slide" key="/images/aisarang_dream_hall_01.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/aisarang_dream_hall_01.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div><div class="swiper-slide" key="/images/aisarang_dream_hall_02.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/aisarang_dream_hall_02.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div><div class="swiper-slide" key="/images/aisarang_dream_hall_03.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/aisarang_dream_hall_03.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div> <div class="swiper-slide" data-astro-cid-5lkxcdsq> <video muted playsinline class="w-full h-full object-contain aspect-[4/3] bg-black rounded-lg" data-astro-cid-5lkxcdsq> <source src="/images/aisarang_kidsroom_video.mp4" type="video/mp4" data-astro-cid-5lkxcdsq>
+Your browser does not support the video tag.
+</video> </div> </div> <!-- 버튼 --> <div class="swiper-button-next" data-astro-cid-5lkxcdsq></div> <div class="swiper-button-prev" data-astro-cid-5lkxcdsq></div> </div> </div> </div> <!-- 우클릭 방지 -->  <script type="module">
+  import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".mySwiper").forEach((el) => {
+      const swiper = new Swiper(el, {
+        loop: false, // ← 문제 생기면 true로 다시
+        navigation: {
+          nextEl: el.querySelector(".swiper-button-next"),
+          prevEl: el.querySelector(".swiper-button-prev"),
+        },
+        speed: 800,
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        allowTouchMove: false, // 휙휙 넘김 방지
+        autoplay: false,
+        observer: true,
+        observeParents: true,
+      });
+
+      const slides = el.querySelectorAll(".swiper-slide");
+
+      let autoplayTimer = null;
+      let currentVideoListeners = null;
+
+      const clearVideoListeners = (video) => {
+        if (!video || !currentVideoListeners) return;
+        video.removeEventListener("canplaythrough", currentVideoListeners.canplaythrough);
+        video.removeEventListener("ended", currentVideoListeners.ended);
+        currentVideoListeners = null;
+      };
+
+      const setAutoplayForSlide = (index) => {
+        clearTimeout(autoplayTimer);
+
+        const slide = slides[index];
+        if (!slide) return;
+
+        const video = slide.querySelector("video");
+
+        if (video) {
+          clearVideoListeners(video);
+
+          video.pause();
+          video.currentTime = 0;
+
+          const onCanPlayThrough = () => {
+            video.play().catch(() => {});
+          };
+
+          const onEnded = () => {
+            swiper.slideNext();
+          };
+
+          video.addEventListener("canplaythrough", onCanPlayThrough, { once: true });
+          video.addEventListener("ended", onEnded, { once: true });
+
+          currentVideoListeners = {
+            canplaythrough: onCanPlayThrough,
+            ended: onEnded,
+          };
+        } else {
+          autoplayTimer = setTimeout(() => {
+            swiper.slideNext();
+          }, 5000);
+        }
+      };
+
+      setAutoplayForSlide(swiper.realIndex);
+
+      swiper.on("slideChange", () => {
+        setAutoplayForSlide(swiper.realIndex);
+      });
+    });
+  });
+</script> <!-- Swiper 스타일 --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"><div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden" data-astro-cid-5lkxcdsq> <div class="p-6" data-astro-cid-5lkxcdsq> <h3 class="text-xl font-semibold mb-4" data-astro-cid-5lkxcdsq>하나은행gold 분당PB센터</h3> <div class="swiper mySwiper" data-astro-cid-5lkxcdsq> <div class="swiper-wrapper" data-astro-cid-5lkxcdsq> <div class="swiper-slide" key="/images/bundang_hanabank_gold_02.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/bundang_hanabank_gold_02.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div><div class="swiper-slide" key="/images/bundang_hanabank_gold_01.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/bundang_hanabank_gold_01.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div> <div class="swiper-slide" data-astro-cid-5lkxcdsq> <video muted playsinline class="w-full h-full object-contain aspect-[4/3] bg-black rounded-lg" data-astro-cid-5lkxcdsq> <source src="/images/hana_bundang_video.mp4" type="video/mp4" data-astro-cid-5lkxcdsq>
+Your browser does not support the video tag.
+</video> </div> </div> <!-- 버튼 --> <div class="swiper-button-next" data-astro-cid-5lkxcdsq></div> <div class="swiper-button-prev" data-astro-cid-5lkxcdsq></div> </div> </div> </div> <!-- 우클릭 방지 -->  <script type="module">
+  import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".mySwiper").forEach((el) => {
+      const swiper = new Swiper(el, {
+        loop: false, // ← 문제 생기면 true로 다시
+        navigation: {
+          nextEl: el.querySelector(".swiper-button-next"),
+          prevEl: el.querySelector(".swiper-button-prev"),
+        },
+        speed: 800,
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        allowTouchMove: false, // 휙휙 넘김 방지
+        autoplay: false,
+        observer: true,
+        observeParents: true,
+      });
+
+      const slides = el.querySelectorAll(".swiper-slide");
+
+      let autoplayTimer = null;
+      let currentVideoListeners = null;
+
+      const clearVideoListeners = (video) => {
+        if (!video || !currentVideoListeners) return;
+        video.removeEventListener("canplaythrough", currentVideoListeners.canplaythrough);
+        video.removeEventListener("ended", currentVideoListeners.ended);
+        currentVideoListeners = null;
+      };
+
+      const setAutoplayForSlide = (index) => {
+        clearTimeout(autoplayTimer);
+
+        const slide = slides[index];
+        if (!slide) return;
+
+        const video = slide.querySelector("video");
+
+        if (video) {
+          clearVideoListeners(video);
+
+          video.pause();
+          video.currentTime = 0;
+
+          const onCanPlayThrough = () => {
+            video.play().catch(() => {});
+          };
+
+          const onEnded = () => {
+            swiper.slideNext();
+          };
+
+          video.addEventListener("canplaythrough", onCanPlayThrough, { once: true });
+          video.addEventListener("ended", onEnded, { once: true });
+
+          currentVideoListeners = {
+            canplaythrough: onCanPlayThrough,
+            ended: onEnded,
+          };
+        } else {
+          autoplayTimer = setTimeout(() => {
+            swiper.slideNext();
+          }, 5000);
+        }
+      };
+
+      setAutoplayForSlide(swiper.realIndex);
+
+      swiper.on("slideChange", () => {
+        setAutoplayForSlide(swiper.realIndex);
+      });
+    });
+  });
+</script> <!-- Swiper 스타일 --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"><div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden" data-astro-cid-5lkxcdsq> <div class="p-6" data-astro-cid-5lkxcdsq> <h3 class="text-xl font-semibold mb-4" data-astro-cid-5lkxcdsq>TheHyundai sephora</h3> <div class="swiper mySwiper" data-astro-cid-5lkxcdsq> <div class="swiper-wrapper" data-astro-cid-5lkxcdsq> <div class="swiper-slide" key="/images/thehyundai_sephora_01.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/thehyundai_sephora_01.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div><div class="swiper-slide" key="/images/thehyundai_sephora_02.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/thehyundai_sephora_02.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div><div class="swiper-slide" key="/images/thehyundai_sephora_03.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/thehyundai_sephora_03.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div><div class="swiper-slide" key="/images/thehyundai_sephora_04.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/thehyundai_sephora_04.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div>  </div> <!-- 버튼 --> <div class="swiper-button-next" data-astro-cid-5lkxcdsq></div> <div class="swiper-button-prev" data-astro-cid-5lkxcdsq></div> </div> </div> </div> <!-- 우클릭 방지 -->  <script type="module">
+  import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".mySwiper").forEach((el) => {
+      const swiper = new Swiper(el, {
+        loop: false, // ← 문제 생기면 true로 다시
+        navigation: {
+          nextEl: el.querySelector(".swiper-button-next"),
+          prevEl: el.querySelector(".swiper-button-prev"),
+        },
+        speed: 800,
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        allowTouchMove: false, // 휙휙 넘김 방지
+        autoplay: false,
+        observer: true,
+        observeParents: true,
+      });
+
+      const slides = el.querySelectorAll(".swiper-slide");
+
+      let autoplayTimer = null;
+      let currentVideoListeners = null;
+
+      const clearVideoListeners = (video) => {
+        if (!video || !currentVideoListeners) return;
+        video.removeEventListener("canplaythrough", currentVideoListeners.canplaythrough);
+        video.removeEventListener("ended", currentVideoListeners.ended);
+        currentVideoListeners = null;
+      };
+
+      const setAutoplayForSlide = (index) => {
+        clearTimeout(autoplayTimer);
+
+        const slide = slides[index];
+        if (!slide) return;
+
+        const video = slide.querySelector("video");
+
+        if (video) {
+          clearVideoListeners(video);
+
+          video.pause();
+          video.currentTime = 0;
+
+          const onCanPlayThrough = () => {
+            video.play().catch(() => {});
+          };
+
+          const onEnded = () => {
+            swiper.slideNext();
+          };
+
+          video.addEventListener("canplaythrough", onCanPlayThrough, { once: true });
+          video.addEventListener("ended", onEnded, { once: true });
+
+          currentVideoListeners = {
+            canplaythrough: onCanPlayThrough,
+            ended: onEnded,
+          };
+        } else {
+          autoplayTimer = setTimeout(() => {
+            swiper.slideNext();
+          }, 5000);
+        }
+      };
+
+      setAutoplayForSlide(swiper.realIndex);
+
+      swiper.on("slideChange", () => {
+        setAutoplayForSlide(swiper.realIndex);
+      });
+    });
+  });
+</script> <!-- Swiper 스타일 --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"><div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden" data-astro-cid-5lkxcdsq> <div class="p-6" data-astro-cid-5lkxcdsq> <h3 class="text-xl font-semibold mb-4" data-astro-cid-5lkxcdsq>River rain</h3> <div class="swiper mySwiper" data-astro-cid-5lkxcdsq> <div class="swiper-wrapper" data-astro-cid-5lkxcdsq>  <div class="swiper-slide" data-astro-cid-5lkxcdsq> <video muted playsinline class="w-full h-full object-contain aspect-[4/3] bg-black rounded-lg" data-astro-cid-5lkxcdsq> <source src="/images/riverain_video.mp4" type="video/mp4" data-astro-cid-5lkxcdsq>
+Your browser does not support the video tag.
+</video> </div> </div> <!-- 버튼 --> <div class="swiper-button-next" data-astro-cid-5lkxcdsq></div> <div class="swiper-button-prev" data-astro-cid-5lkxcdsq></div> </div> </div> </div> <!-- 우클릭 방지 -->  <script type="module">
+  import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".mySwiper").forEach((el) => {
+      const swiper = new Swiper(el, {
+        loop: false, // ← 문제 생기면 true로 다시
+        navigation: {
+          nextEl: el.querySelector(".swiper-button-next"),
+          prevEl: el.querySelector(".swiper-button-prev"),
+        },
+        speed: 800,
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        allowTouchMove: false, // 휙휙 넘김 방지
+        autoplay: false,
+        observer: true,
+        observeParents: true,
+      });
+
+      const slides = el.querySelectorAll(".swiper-slide");
+
+      let autoplayTimer = null;
+      let currentVideoListeners = null;
+
+      const clearVideoListeners = (video) => {
+        if (!video || !currentVideoListeners) return;
+        video.removeEventListener("canplaythrough", currentVideoListeners.canplaythrough);
+        video.removeEventListener("ended", currentVideoListeners.ended);
+        currentVideoListeners = null;
+      };
+
+      const setAutoplayForSlide = (index) => {
+        clearTimeout(autoplayTimer);
+
+        const slide = slides[index];
+        if (!slide) return;
+
+        const video = slide.querySelector("video");
+
+        if (video) {
+          clearVideoListeners(video);
+
+          video.pause();
+          video.currentTime = 0;
+
+          const onCanPlayThrough = () => {
+            video.play().catch(() => {});
+          };
+
+          const onEnded = () => {
+            swiper.slideNext();
+          };
+
+          video.addEventListener("canplaythrough", onCanPlayThrough, { once: true });
+          video.addEventListener("ended", onEnded, { once: true });
+
+          currentVideoListeners = {
+            canplaythrough: onCanPlayThrough,
+            ended: onEnded,
+          };
+        } else {
+          autoplayTimer = setTimeout(() => {
+            swiper.slideNext();
+          }, 5000);
+        }
+      };
+
+      setAutoplayForSlide(swiper.realIndex);
+
+      swiper.on("slideChange", () => {
+        setAutoplayForSlide(swiper.realIndex);
+      });
+    });
+  });
+</script> <!-- Swiper 스타일 --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"><div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden" data-astro-cid-5lkxcdsq> <div class="p-6" data-astro-cid-5lkxcdsq> <h3 class="text-xl font-semibold mb-4" data-astro-cid-5lkxcdsq>남해 펜션</h3> <div class="swiper mySwiper" data-astro-cid-5lkxcdsq> <div class="swiper-wrapper" data-astro-cid-5lkxcdsq> <div class="swiper-slide" key="/images/namhae_luxury_pension_04.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/namhae_luxury_pension_04.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div><div class="swiper-slide" key="/images/namhae_luxury_pension_05.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/namhae_luxury_pension_05.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div><div class="swiper-slide" key="/images/namhae_luxury_pension_06.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/namhae_luxury_pension_06.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div><div class="swiper-slide" key="/images/namhae_luxury_pension_01.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/namhae_luxury_pension_01.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div><div class="swiper-slide" key="/images/namhae_luxury_pension_02.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/namhae_luxury_pension_02.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div><div class="swiper-slide" key="/images/namhae_luxury_pension_03.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/namhae_luxury_pension_03.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div>  </div> <!-- 버튼 --> <div class="swiper-button-next" data-astro-cid-5lkxcdsq></div> <div class="swiper-button-prev" data-astro-cid-5lkxcdsq></div> </div> </div> </div> <!-- 우클릭 방지 -->  <script type="module">
+  import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".mySwiper").forEach((el) => {
+      const swiper = new Swiper(el, {
+        loop: false, // ← 문제 생기면 true로 다시
+        navigation: {
+          nextEl: el.querySelector(".swiper-button-next"),
+          prevEl: el.querySelector(".swiper-button-prev"),
+        },
+        speed: 800,
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        allowTouchMove: false, // 휙휙 넘김 방지
+        autoplay: false,
+        observer: true,
+        observeParents: true,
+      });
+
+      const slides = el.querySelectorAll(".swiper-slide");
+
+      let autoplayTimer = null;
+      let currentVideoListeners = null;
+
+      const clearVideoListeners = (video) => {
+        if (!video || !currentVideoListeners) return;
+        video.removeEventListener("canplaythrough", currentVideoListeners.canplaythrough);
+        video.removeEventListener("ended", currentVideoListeners.ended);
+        currentVideoListeners = null;
+      };
+
+      const setAutoplayForSlide = (index) => {
+        clearTimeout(autoplayTimer);
+
+        const slide = slides[index];
+        if (!slide) return;
+
+        const video = slide.querySelector("video");
+
+        if (video) {
+          clearVideoListeners(video);
+
+          video.pause();
+          video.currentTime = 0;
+
+          const onCanPlayThrough = () => {
+            video.play().catch(() => {});
+          };
+
+          const onEnded = () => {
+            swiper.slideNext();
+          };
+
+          video.addEventListener("canplaythrough", onCanPlayThrough, { once: true });
+          video.addEventListener("ended", onEnded, { once: true });
+
+          currentVideoListeners = {
+            canplaythrough: onCanPlayThrough,
+            ended: onEnded,
+          };
+        } else {
+          autoplayTimer = setTimeout(() => {
+            swiper.slideNext();
+          }, 5000);
+        }
+      };
+
+      setAutoplayForSlide(swiper.realIndex);
+
+      swiper.on("slideChange", () => {
+        setAutoplayForSlide(swiper.realIndex);
+      });
+    });
+  });
+</script> <!-- Swiper 스타일 --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"><div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden" data-astro-cid-5lkxcdsq> <div class="p-6" data-astro-cid-5lkxcdsq> <h3 class="text-xl font-semibold mb-4" data-astro-cid-5lkxcdsq>소방계통도(공주고등학교)</h3> <div class="swiper mySwiper" data-astro-cid-5lkxcdsq> <div class="swiper-wrapper" data-astro-cid-5lkxcdsq> <div class="swiper-slide" key="/images/fire_diagram_01.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/fire_diagram_01.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div><div class="swiper-slide" key="/images/fire_diagram_02.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/fire_diagram_02.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div>  </div> <!-- 버튼 --> <div class="swiper-button-next" data-astro-cid-5lkxcdsq></div> <div class="swiper-button-prev" data-astro-cid-5lkxcdsq></div> </div> </div> </div> <!-- 우클릭 방지 -->  <script type="module">
+  import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".mySwiper").forEach((el) => {
+      const swiper = new Swiper(el, {
+        loop: false, // ← 문제 생기면 true로 다시
+        navigation: {
+          nextEl: el.querySelector(".swiper-button-next"),
+          prevEl: el.querySelector(".swiper-button-prev"),
+        },
+        speed: 800,
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        allowTouchMove: false, // 휙휙 넘김 방지
+        autoplay: false,
+        observer: true,
+        observeParents: true,
+      });
+
+      const slides = el.querySelectorAll(".swiper-slide");
+
+      let autoplayTimer = null;
+      let currentVideoListeners = null;
+
+      const clearVideoListeners = (video) => {
+        if (!video || !currentVideoListeners) return;
+        video.removeEventListener("canplaythrough", currentVideoListeners.canplaythrough);
+        video.removeEventListener("ended", currentVideoListeners.ended);
+        currentVideoListeners = null;
+      };
+
+      const setAutoplayForSlide = (index) => {
+        clearTimeout(autoplayTimer);
+
+        const slide = slides[index];
+        if (!slide) return;
+
+        const video = slide.querySelector("video");
+
+        if (video) {
+          clearVideoListeners(video);
+
+          video.pause();
+          video.currentTime = 0;
+
+          const onCanPlayThrough = () => {
+            video.play().catch(() => {});
+          };
+
+          const onEnded = () => {
+            swiper.slideNext();
+          };
+
+          video.addEventListener("canplaythrough", onCanPlayThrough, { once: true });
+          video.addEventListener("ended", onEnded, { once: true });
+
+          currentVideoListeners = {
+            canplaythrough: onCanPlayThrough,
+            ended: onEnded,
+          };
+        } else {
+          autoplayTimer = setTimeout(() => {
+            swiper.slideNext();
+          }, 5000);
+        }
+      };
+
+      setAutoplayForSlide(swiper.realIndex);
+
+      swiper.on("slideChange", () => {
+        setAutoplayForSlide(swiper.realIndex);
+      });
+    });
+  });
+</script> <!-- Swiper 스타일 --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"><div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden" data-astro-cid-5lkxcdsq> <div class="p-6" data-astro-cid-5lkxcdsq> <h3 class="text-xl font-semibold mb-4" data-astro-cid-5lkxcdsq>함정추진기 모니터링 시스템</h3> <div class="swiper mySwiper" data-astro-cid-5lkxcdsq> <div class="swiper-wrapper" data-astro-cid-5lkxcdsq> <div class="swiper-slide" key="/images/naval_propulsion_monitoring_01.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/naval_propulsion_monitoring_01.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div> <div class="swiper-slide" data-astro-cid-5lkxcdsq> <video muted playsinline class="w-full h-full object-contain aspect-[4/3] bg-black rounded-lg" data-astro-cid-5lkxcdsq> <source src="/images/naval_propulsion_monitor_video.mp4" type="video/mp4" data-astro-cid-5lkxcdsq>
+Your browser does not support the video tag.
+</video> </div> </div> <!-- 버튼 --> <div class="swiper-button-next" data-astro-cid-5lkxcdsq></div> <div class="swiper-button-prev" data-astro-cid-5lkxcdsq></div> </div> </div> </div> <!-- 우클릭 방지 -->  <script type="module">
+  import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".mySwiper").forEach((el) => {
+      const swiper = new Swiper(el, {
+        loop: false, // ← 문제 생기면 true로 다시
+        navigation: {
+          nextEl: el.querySelector(".swiper-button-next"),
+          prevEl: el.querySelector(".swiper-button-prev"),
+        },
+        speed: 800,
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        allowTouchMove: false, // 휙휙 넘김 방지
+        autoplay: false,
+        observer: true,
+        observeParents: true,
+      });
+
+      const slides = el.querySelectorAll(".swiper-slide");
+
+      let autoplayTimer = null;
+      let currentVideoListeners = null;
+
+      const clearVideoListeners = (video) => {
+        if (!video || !currentVideoListeners) return;
+        video.removeEventListener("canplaythrough", currentVideoListeners.canplaythrough);
+        video.removeEventListener("ended", currentVideoListeners.ended);
+        currentVideoListeners = null;
+      };
+
+      const setAutoplayForSlide = (index) => {
+        clearTimeout(autoplayTimer);
+
+        const slide = slides[index];
+        if (!slide) return;
+
+        const video = slide.querySelector("video");
+
+        if (video) {
+          clearVideoListeners(video);
+
+          video.pause();
+          video.currentTime = 0;
+
+          const onCanPlayThrough = () => {
+            video.play().catch(() => {});
+          };
+
+          const onEnded = () => {
+            swiper.slideNext();
+          };
+
+          video.addEventListener("canplaythrough", onCanPlayThrough, { once: true });
+          video.addEventListener("ended", onEnded, { once: true });
+
+          currentVideoListeners = {
+            canplaythrough: onCanPlayThrough,
+            ended: onEnded,
+          };
+        } else {
+          autoplayTimer = setTimeout(() => {
+            swiper.slideNext();
+          }, 5000);
+        }
+      };
+
+      setAutoplayForSlide(swiper.realIndex);
+
+      swiper.on("slideChange", () => {
+        setAutoplayForSlide(swiper.realIndex);
+      });
+    });
+  });
+</script> <!-- Swiper 스타일 --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"><div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden" data-astro-cid-5lkxcdsq> <div class="p-6" data-astro-cid-5lkxcdsq> <h3 class="text-xl font-semibold mb-4" data-astro-cid-5lkxcdsq>도자기박물관(남해)</h3> <div class="swiper mySwiper" data-astro-cid-5lkxcdsq> <div class="swiper-wrapper" data-astro-cid-5lkxcdsq> <div class="swiper-slide" key="/images/namhae_05.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/namhae_05.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div><div class="swiper-slide" key="/images/namhae_06.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/namhae_06.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div><div class="swiper-slide" key="/images/namhae_07.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/namhae_07.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div><div class="swiper-slide" key="/images/namhae_08.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/namhae_08.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div><div class="swiper-slide" key="/images/namhae_01.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/namhae_01.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div><div class="swiper-slide" key="/images/namhae_02.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/namhae_02.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div><div class="swiper-slide" key="/images/namhae_03.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/namhae_03.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div> <div class="swiper-slide" data-astro-cid-5lkxcdsq> <video muted playsinline class="w-full h-full object-contain aspect-[4/3] bg-black rounded-lg" data-astro-cid-5lkxcdsq> <source src="/images/namhae_video.mp4" type="video/mp4" data-astro-cid-5lkxcdsq>
+Your browser does not support the video tag.
+</video> </div> </div> <!-- 버튼 --> <div class="swiper-button-next" data-astro-cid-5lkxcdsq></div> <div class="swiper-button-prev" data-astro-cid-5lkxcdsq></div> </div> </div> </div> <!-- 우클릭 방지 -->  <script type="module">
+  import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".mySwiper").forEach((el) => {
+      const swiper = new Swiper(el, {
+        loop: false, // ← 문제 생기면 true로 다시
+        navigation: {
+          nextEl: el.querySelector(".swiper-button-next"),
+          prevEl: el.querySelector(".swiper-button-prev"),
+        },
+        speed: 800,
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        allowTouchMove: false, // 휙휙 넘김 방지
+        autoplay: false,
+        observer: true,
+        observeParents: true,
+      });
+
+      const slides = el.querySelectorAll(".swiper-slide");
+
+      let autoplayTimer = null;
+      let currentVideoListeners = null;
+
+      const clearVideoListeners = (video) => {
+        if (!video || !currentVideoListeners) return;
+        video.removeEventListener("canplaythrough", currentVideoListeners.canplaythrough);
+        video.removeEventListener("ended", currentVideoListeners.ended);
+        currentVideoListeners = null;
+      };
+
+      const setAutoplayForSlide = (index) => {
+        clearTimeout(autoplayTimer);
+
+        const slide = slides[index];
+        if (!slide) return;
+
+        const video = slide.querySelector("video");
+
+        if (video) {
+          clearVideoListeners(video);
+
+          video.pause();
+          video.currentTime = 0;
+
+          const onCanPlayThrough = () => {
+            video.play().catch(() => {});
+          };
+
+          const onEnded = () => {
+            swiper.slideNext();
+          };
+
+          video.addEventListener("canplaythrough", onCanPlayThrough, { once: true });
+          video.addEventListener("ended", onEnded, { once: true });
+
+          currentVideoListeners = {
+            canplaythrough: onCanPlayThrough,
+            ended: onEnded,
+          };
+        } else {
+          autoplayTimer = setTimeout(() => {
+            swiper.slideNext();
+          }, 5000);
+        }
+      };
+
+      setAutoplayForSlide(swiper.realIndex);
+
+      swiper.on("slideChange", () => {
+        setAutoplayForSlide(swiper.realIndex);
+      });
+    });
+  });
+</script> <!-- Swiper 스타일 --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"><div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden" data-astro-cid-5lkxcdsq> <div class="p-6" data-astro-cid-5lkxcdsq> <h3 class="text-xl font-semibold mb-4" data-astro-cid-5lkxcdsq>가평 빠지</h3> <div class="swiper mySwiper" data-astro-cid-5lkxcdsq> <div class="swiper-wrapper" data-astro-cid-5lkxcdsq>  <div class="swiper-slide" data-astro-cid-5lkxcdsq> <video muted playsinline class="w-full h-full object-contain aspect-[4/3] bg-black rounded-lg" data-astro-cid-5lkxcdsq> <source src="/images/gapyeong_floating_video.mp4" type="video/mp4" data-astro-cid-5lkxcdsq>
+Your browser does not support the video tag.
+</video> </div> </div> <!-- 버튼 --> <div class="swiper-button-next" data-astro-cid-5lkxcdsq></div> <div class="swiper-button-prev" data-astro-cid-5lkxcdsq></div> </div> </div> </div> <!-- 우클릭 방지 -->  <script type="module">
+  import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".mySwiper").forEach((el) => {
+      const swiper = new Swiper(el, {
+        loop: false, // ← 문제 생기면 true로 다시
+        navigation: {
+          nextEl: el.querySelector(".swiper-button-next"),
+          prevEl: el.querySelector(".swiper-button-prev"),
+        },
+        speed: 800,
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        allowTouchMove: false, // 휙휙 넘김 방지
+        autoplay: false,
+        observer: true,
+        observeParents: true,
+      });
+
+      const slides = el.querySelectorAll(".swiper-slide");
+
+      let autoplayTimer = null;
+      let currentVideoListeners = null;
+
+      const clearVideoListeners = (video) => {
+        if (!video || !currentVideoListeners) return;
+        video.removeEventListener("canplaythrough", currentVideoListeners.canplaythrough);
+        video.removeEventListener("ended", currentVideoListeners.ended);
+        currentVideoListeners = null;
+      };
+
+      const setAutoplayForSlide = (index) => {
+        clearTimeout(autoplayTimer);
+
+        const slide = slides[index];
+        if (!slide) return;
+
+        const video = slide.querySelector("video");
+
+        if (video) {
+          clearVideoListeners(video);
+
+          video.pause();
+          video.currentTime = 0;
+
+          const onCanPlayThrough = () => {
+            video.play().catch(() => {});
+          };
+
+          const onEnded = () => {
+            swiper.slideNext();
+          };
+
+          video.addEventListener("canplaythrough", onCanPlayThrough, { once: true });
+          video.addEventListener("ended", onEnded, { once: true });
+
+          currentVideoListeners = {
+            canplaythrough: onCanPlayThrough,
+            ended: onEnded,
+          };
+        } else {
+          autoplayTimer = setTimeout(() => {
+            swiper.slideNext();
+          }, 5000);
+        }
+      };
+
+      setAutoplayForSlide(swiper.realIndex);
+
+      swiper.on("slideChange", () => {
+        setAutoplayForSlide(swiper.realIndex);
+      });
+    });
+  });
+</script> <!-- Swiper 스타일 --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"><div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden" data-astro-cid-5lkxcdsq> <div class="p-6" data-astro-cid-5lkxcdsq> <h3 class="text-xl font-semibold mb-4" data-astro-cid-5lkxcdsq>The M Convention(울산)</h3> <div class="swiper mySwiper" data-astro-cid-5lkxcdsq> <div class="swiper-wrapper" data-astro-cid-5lkxcdsq> <div class="swiper-slide" key="/images/ulsan_them_convention_weddinghall_01.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/ulsan_them_convention_weddinghall_01.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div><div class="swiper-slide" key="/images/ulsan_them_convention_weddinghall_02.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/ulsan_them_convention_weddinghall_02.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div> <div class="swiper-slide" data-astro-cid-5lkxcdsq> <video muted playsinline class="w-full h-full object-contain aspect-[4/3] bg-black rounded-lg" data-astro-cid-5lkxcdsq> <source src="/images/ulsan_themconvention_video_01.mp4" type="video/mp4" data-astro-cid-5lkxcdsq>
+Your browser does not support the video tag.
+</video> </div> </div> <!-- 버튼 --> <div class="swiper-button-next" data-astro-cid-5lkxcdsq></div> <div class="swiper-button-prev" data-astro-cid-5lkxcdsq></div> </div> </div> </div> <!-- 우클릭 방지 -->  <script type="module">
+  import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".mySwiper").forEach((el) => {
+      const swiper = new Swiper(el, {
+        loop: false, // ← 문제 생기면 true로 다시
+        navigation: {
+          nextEl: el.querySelector(".swiper-button-next"),
+          prevEl: el.querySelector(".swiper-button-prev"),
+        },
+        speed: 800,
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        allowTouchMove: false, // 휙휙 넘김 방지
+        autoplay: false,
+        observer: true,
+        observeParents: true,
+      });
+
+      const slides = el.querySelectorAll(".swiper-slide");
+
+      let autoplayTimer = null;
+      let currentVideoListeners = null;
+
+      const clearVideoListeners = (video) => {
+        if (!video || !currentVideoListeners) return;
+        video.removeEventListener("canplaythrough", currentVideoListeners.canplaythrough);
+        video.removeEventListener("ended", currentVideoListeners.ended);
+        currentVideoListeners = null;
+      };
+
+      const setAutoplayForSlide = (index) => {
+        clearTimeout(autoplayTimer);
+
+        const slide = slides[index];
+        if (!slide) return;
+
+        const video = slide.querySelector("video");
+
+        if (video) {
+          clearVideoListeners(video);
+
+          video.pause();
+          video.currentTime = 0;
+
+          const onCanPlayThrough = () => {
+            video.play().catch(() => {});
+          };
+
+          const onEnded = () => {
+            swiper.slideNext();
+          };
+
+          video.addEventListener("canplaythrough", onCanPlayThrough, { once: true });
+          video.addEventListener("ended", onEnded, { once: true });
+
+          currentVideoListeners = {
+            canplaythrough: onCanPlayThrough,
+            ended: onEnded,
+          };
+        } else {
+          autoplayTimer = setTimeout(() => {
+            swiper.slideNext();
+          }, 5000);
+        }
+      };
+
+      setAutoplayForSlide(swiper.realIndex);
+
+      swiper.on("slideChange", () => {
+        setAutoplayForSlide(swiper.realIndex);
+      });
+    });
+  });
+</script> <!-- Swiper 스타일 --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"><div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden" data-astro-cid-5lkxcdsq> <div class="p-6" data-astro-cid-5lkxcdsq> <h3 class="text-xl font-semibold mb-4" data-astro-cid-5lkxcdsq>PARNAS Hotel</h3> <div class="swiper mySwiper" data-astro-cid-5lkxcdsq> <div class="swiper-wrapper" data-astro-cid-5lkxcdsq> <div class="swiper-slide" key="/images/parnas_hotel_01.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/parnas_hotel_01.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div><div class="swiper-slide" key="/images/parnas_hotel_02.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/parnas_hotel_02.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div>  </div> <!-- 버튼 --> <div class="swiper-button-next" data-astro-cid-5lkxcdsq></div> <div class="swiper-button-prev" data-astro-cid-5lkxcdsq></div> </div> </div> </div> <!-- 우클릭 방지 -->  <script type="module">
+  import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".mySwiper").forEach((el) => {
+      const swiper = new Swiper(el, {
+        loop: false, // ← 문제 생기면 true로 다시
+        navigation: {
+          nextEl: el.querySelector(".swiper-button-next"),
+          prevEl: el.querySelector(".swiper-button-prev"),
+        },
+        speed: 800,
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        allowTouchMove: false, // 휙휙 넘김 방지
+        autoplay: false,
+        observer: true,
+        observeParents: true,
+      });
+
+      const slides = el.querySelectorAll(".swiper-slide");
+
+      let autoplayTimer = null;
+      let currentVideoListeners = null;
+
+      const clearVideoListeners = (video) => {
+        if (!video || !currentVideoListeners) return;
+        video.removeEventListener("canplaythrough", currentVideoListeners.canplaythrough);
+        video.removeEventListener("ended", currentVideoListeners.ended);
+        currentVideoListeners = null;
+      };
+
+      const setAutoplayForSlide = (index) => {
+        clearTimeout(autoplayTimer);
+
+        const slide = slides[index];
+        if (!slide) return;
+
+        const video = slide.querySelector("video");
+
+        if (video) {
+          clearVideoListeners(video);
+
+          video.pause();
+          video.currentTime = 0;
+
+          const onCanPlayThrough = () => {
+            video.play().catch(() => {});
+          };
+
+          const onEnded = () => {
+            swiper.slideNext();
+          };
+
+          video.addEventListener("canplaythrough", onCanPlayThrough, { once: true });
+          video.addEventListener("ended", onEnded, { once: true });
+
+          currentVideoListeners = {
+            canplaythrough: onCanPlayThrough,
+            ended: onEnded,
+          };
+        } else {
+          autoplayTimer = setTimeout(() => {
+            swiper.slideNext();
+          }, 5000);
+        }
+      };
+
+      setAutoplayForSlide(swiper.realIndex);
+
+      swiper.on("slideChange", () => {
+        setAutoplayForSlide(swiper.realIndex);
+      });
+    });
+  });
+</script> <!-- Swiper 스타일 --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"><div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden" data-astro-cid-5lkxcdsq> <div class="p-6" data-astro-cid-5lkxcdsq> <h3 class="text-xl font-semibold mb-4" data-astro-cid-5lkxcdsq>피부과(개포)</h3> <div class="swiper mySwiper" data-astro-cid-5lkxcdsq> <div class="swiper-wrapper" data-astro-cid-5lkxcdsq> <div class="swiper-slide" key="/images/gaepo_skinclinic.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/gaepo_skinclinic.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div>  </div> <!-- 버튼 --> <div class="swiper-button-next" data-astro-cid-5lkxcdsq></div> <div class="swiper-button-prev" data-astro-cid-5lkxcdsq></div> </div> </div> </div> <!-- 우클릭 방지 -->  <script type="module">
+  import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".mySwiper").forEach((el) => {
+      const swiper = new Swiper(el, {
+        loop: false, // ← 문제 생기면 true로 다시
+        navigation: {
+          nextEl: el.querySelector(".swiper-button-next"),
+          prevEl: el.querySelector(".swiper-button-prev"),
+        },
+        speed: 800,
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        allowTouchMove: false, // 휙휙 넘김 방지
+        autoplay: false,
+        observer: true,
+        observeParents: true,
+      });
+
+      const slides = el.querySelectorAll(".swiper-slide");
+
+      let autoplayTimer = null;
+      let currentVideoListeners = null;
+
+      const clearVideoListeners = (video) => {
+        if (!video || !currentVideoListeners) return;
+        video.removeEventListener("canplaythrough", currentVideoListeners.canplaythrough);
+        video.removeEventListener("ended", currentVideoListeners.ended);
+        currentVideoListeners = null;
+      };
+
+      const setAutoplayForSlide = (index) => {
+        clearTimeout(autoplayTimer);
+
+        const slide = slides[index];
+        if (!slide) return;
+
+        const video = slide.querySelector("video");
+
+        if (video) {
+          clearVideoListeners(video);
+
+          video.pause();
+          video.currentTime = 0;
+
+          const onCanPlayThrough = () => {
+            video.play().catch(() => {});
+          };
+
+          const onEnded = () => {
+            swiper.slideNext();
+          };
+
+          video.addEventListener("canplaythrough", onCanPlayThrough, { once: true });
+          video.addEventListener("ended", onEnded, { once: true });
+
+          currentVideoListeners = {
+            canplaythrough: onCanPlayThrough,
+            ended: onEnded,
+          };
+        } else {
+          autoplayTimer = setTimeout(() => {
+            swiper.slideNext();
+          }, 5000);
+        }
+      };
+
+      setAutoplayForSlide(swiper.realIndex);
+
+      swiper.on("slideChange", () => {
+        setAutoplayForSlide(swiper.realIndex);
+      });
+    });
+  });
+</script> <!-- Swiper 스타일 --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"><div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden" data-astro-cid-5lkxcdsq> <div class="p-6" data-astro-cid-5lkxcdsq> <h3 class="text-xl font-semibold mb-4" data-astro-cid-5lkxcdsq>피부과(성남)</h3> <div class="swiper mySwiper" data-astro-cid-5lkxcdsq> <div class="swiper-wrapper" data-astro-cid-5lkxcdsq> <div class="swiper-slide" key="/images/seongnam_skinclinic_01.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/seongnam_skinclinic_01.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div> <div class="swiper-slide" data-astro-cid-5lkxcdsq> <video muted playsinline class="w-full h-full object-contain aspect-[4/3] bg-black rounded-lg" data-astro-cid-5lkxcdsq> <source src="/images/seongnam_clinic_video.mp4" type="video/mp4" data-astro-cid-5lkxcdsq>
+Your browser does not support the video tag.
+</video> </div> </div> <!-- 버튼 --> <div class="swiper-button-next" data-astro-cid-5lkxcdsq></div> <div class="swiper-button-prev" data-astro-cid-5lkxcdsq></div> </div> </div> </div> <!-- 우클릭 방지 -->  <script type="module">
+  import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".mySwiper").forEach((el) => {
+      const swiper = new Swiper(el, {
+        loop: false, // ← 문제 생기면 true로 다시
+        navigation: {
+          nextEl: el.querySelector(".swiper-button-next"),
+          prevEl: el.querySelector(".swiper-button-prev"),
+        },
+        speed: 800,
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        allowTouchMove: false, // 휙휙 넘김 방지
+        autoplay: false,
+        observer: true,
+        observeParents: true,
+      });
+
+      const slides = el.querySelectorAll(".swiper-slide");
+
+      let autoplayTimer = null;
+      let currentVideoListeners = null;
+
+      const clearVideoListeners = (video) => {
+        if (!video || !currentVideoListeners) return;
+        video.removeEventListener("canplaythrough", currentVideoListeners.canplaythrough);
+        video.removeEventListener("ended", currentVideoListeners.ended);
+        currentVideoListeners = null;
+      };
+
+      const setAutoplayForSlide = (index) => {
+        clearTimeout(autoplayTimer);
+
+        const slide = slides[index];
+        if (!slide) return;
+
+        const video = slide.querySelector("video");
+
+        if (video) {
+          clearVideoListeners(video);
+
+          video.pause();
+          video.currentTime = 0;
+
+          const onCanPlayThrough = () => {
+            video.play().catch(() => {});
+          };
+
+          const onEnded = () => {
+            swiper.slideNext();
+          };
+
+          video.addEventListener("canplaythrough", onCanPlayThrough, { once: true });
+          video.addEventListener("ended", onEnded, { once: true });
+
+          currentVideoListeners = {
+            canplaythrough: onCanPlayThrough,
+            ended: onEnded,
+          };
+        } else {
+          autoplayTimer = setTimeout(() => {
+            swiper.slideNext();
+          }, 5000);
+        }
+      };
+
+      setAutoplayForSlide(swiper.realIndex);
+
+      swiper.on("slideChange", () => {
+        setAutoplayForSlide(swiper.realIndex);
+      });
+    });
+  });
+</script> <!-- Swiper 스타일 --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"><div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden" data-astro-cid-5lkxcdsq> <div class="p-6" data-astro-cid-5lkxcdsq> <h3 class="text-xl font-semibold mb-4" data-astro-cid-5lkxcdsq>피부과(서래마을)</h3> <div class="swiper mySwiper" data-astro-cid-5lkxcdsq> <div class="swiper-wrapper" data-astro-cid-5lkxcdsq> <div class="swiper-slide" key="/images/seorae_village_01.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/seorae_village_01.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div> <div class="swiper-slide" data-astro-cid-5lkxcdsq> <video muted playsinline class="w-full h-full object-contain aspect-[4/3] bg-black rounded-lg" data-astro-cid-5lkxcdsq> <source src="/images/seorae_clinic_lighting_video.mp4" type="video/mp4" data-astro-cid-5lkxcdsq>
+Your browser does not support the video tag.
+</video> </div> </div> <!-- 버튼 --> <div class="swiper-button-next" data-astro-cid-5lkxcdsq></div> <div class="swiper-button-prev" data-astro-cid-5lkxcdsq></div> </div> </div> </div> <!-- 우클릭 방지 -->  <script type="module">
+  import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".mySwiper").forEach((el) => {
+      const swiper = new Swiper(el, {
+        loop: false, // ← 문제 생기면 true로 다시
+        navigation: {
+          nextEl: el.querySelector(".swiper-button-next"),
+          prevEl: el.querySelector(".swiper-button-prev"),
+        },
+        speed: 800,
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        allowTouchMove: false, // 휙휙 넘김 방지
+        autoplay: false,
+        observer: true,
+        observeParents: true,
+      });
+
+      const slides = el.querySelectorAll(".swiper-slide");
+
+      let autoplayTimer = null;
+      let currentVideoListeners = null;
+
+      const clearVideoListeners = (video) => {
+        if (!video || !currentVideoListeners) return;
+        video.removeEventListener("canplaythrough", currentVideoListeners.canplaythrough);
+        video.removeEventListener("ended", currentVideoListeners.ended);
+        currentVideoListeners = null;
+      };
+
+      const setAutoplayForSlide = (index) => {
+        clearTimeout(autoplayTimer);
+
+        const slide = slides[index];
+        if (!slide) return;
+
+        const video = slide.querySelector("video");
+
+        if (video) {
+          clearVideoListeners(video);
+
+          video.pause();
+          video.currentTime = 0;
+
+          const onCanPlayThrough = () => {
+            video.play().catch(() => {});
+          };
+
+          const onEnded = () => {
+            swiper.slideNext();
+          };
+
+          video.addEventListener("canplaythrough", onCanPlayThrough, { once: true });
+          video.addEventListener("ended", onEnded, { once: true });
+
+          currentVideoListeners = {
+            canplaythrough: onCanPlayThrough,
+            ended: onEnded,
+          };
+        } else {
+          autoplayTimer = setTimeout(() => {
+            swiper.slideNext();
+          }, 5000);
+        }
+      };
+
+      setAutoplayForSlide(swiper.realIndex);
+
+      swiper.on("slideChange", () => {
+        setAutoplayForSlide(swiper.realIndex);
+      });
+    });
+  });
+</script> <!-- Swiper 스타일 --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"><div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden" data-astro-cid-5lkxcdsq> <div class="p-6" data-astro-cid-5lkxcdsq> <h3 class="text-xl font-semibold mb-4" data-astro-cid-5lkxcdsq>피부과(여의도)</h3> <div class="swiper mySwiper" data-astro-cid-5lkxcdsq> <div class="swiper-wrapper" data-astro-cid-5lkxcdsq> <div class="swiper-slide" key="/images/yeouido_skinclinic_01.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/yeouido_skinclinic_01.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div>  </div> <!-- 버튼 --> <div class="swiper-button-next" data-astro-cid-5lkxcdsq></div> <div class="swiper-button-prev" data-astro-cid-5lkxcdsq></div> </div> </div> </div> <!-- 우클릭 방지 -->  <script type="module">
+  import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".mySwiper").forEach((el) => {
+      const swiper = new Swiper(el, {
+        loop: false, // ← 문제 생기면 true로 다시
+        navigation: {
+          nextEl: el.querySelector(".swiper-button-next"),
+          prevEl: el.querySelector(".swiper-button-prev"),
+        },
+        speed: 800,
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        allowTouchMove: false, // 휙휙 넘김 방지
+        autoplay: false,
+        observer: true,
+        observeParents: true,
+      });
+
+      const slides = el.querySelectorAll(".swiper-slide");
+
+      let autoplayTimer = null;
+      let currentVideoListeners = null;
+
+      const clearVideoListeners = (video) => {
+        if (!video || !currentVideoListeners) return;
+        video.removeEventListener("canplaythrough", currentVideoListeners.canplaythrough);
+        video.removeEventListener("ended", currentVideoListeners.ended);
+        currentVideoListeners = null;
+      };
+
+      const setAutoplayForSlide = (index) => {
+        clearTimeout(autoplayTimer);
+
+        const slide = slides[index];
+        if (!slide) return;
+
+        const video = slide.querySelector("video");
+
+        if (video) {
+          clearVideoListeners(video);
+
+          video.pause();
+          video.currentTime = 0;
+
+          const onCanPlayThrough = () => {
+            video.play().catch(() => {});
+          };
+
+          const onEnded = () => {
+            swiper.slideNext();
+          };
+
+          video.addEventListener("canplaythrough", onCanPlayThrough, { once: true });
+          video.addEventListener("ended", onEnded, { once: true });
+
+          currentVideoListeners = {
+            canplaythrough: onCanPlayThrough,
+            ended: onEnded,
+          };
+        } else {
+          autoplayTimer = setTimeout(() => {
+            swiper.slideNext();
+          }, 5000);
+        }
+      };
+
+      setAutoplayForSlide(swiper.realIndex);
+
+      swiper.on("slideChange", () => {
+        setAutoplayForSlide(swiper.realIndex);
+      });
+    });
+  });
+</script> <!-- Swiper 스타일 --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"><div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden" data-astro-cid-5lkxcdsq> <div class="p-6" data-astro-cid-5lkxcdsq> <h3 class="text-xl font-semibold mb-4" data-astro-cid-5lkxcdsq>Gallery(담양)</h3> <div class="swiper mySwiper" data-astro-cid-5lkxcdsq> <div class="swiper-wrapper" data-astro-cid-5lkxcdsq> <div class="swiper-slide" key="/images/damyang_gallery_01.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/damyang_gallery_01.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div><div class="swiper-slide" key="/images/damyang_gallery_02.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/damyang_gallery_02.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div><div class="swiper-slide" key="/images/damyang_gallery_03.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/damyang_gallery_03.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div> <div class="swiper-slide" data-astro-cid-5lkxcdsq> <video muted playsinline class="w-full h-full object-contain aspect-[4/3] bg-black rounded-lg" data-astro-cid-5lkxcdsq> <source src="/images/damyang_gallery_video.mp4" type="video/mp4" data-astro-cid-5lkxcdsq>
+Your browser does not support the video tag.
+</video> </div> </div> <!-- 버튼 --> <div class="swiper-button-next" data-astro-cid-5lkxcdsq></div> <div class="swiper-button-prev" data-astro-cid-5lkxcdsq></div> </div> </div> </div> <!-- 우클릭 방지 -->  <script type="module">
+  import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".mySwiper").forEach((el) => {
+      const swiper = new Swiper(el, {
+        loop: false, // ← 문제 생기면 true로 다시
+        navigation: {
+          nextEl: el.querySelector(".swiper-button-next"),
+          prevEl: el.querySelector(".swiper-button-prev"),
+        },
+        speed: 800,
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        allowTouchMove: false, // 휙휙 넘김 방지
+        autoplay: false,
+        observer: true,
+        observeParents: true,
+      });
+
+      const slides = el.querySelectorAll(".swiper-slide");
+
+      let autoplayTimer = null;
+      let currentVideoListeners = null;
+
+      const clearVideoListeners = (video) => {
+        if (!video || !currentVideoListeners) return;
+        video.removeEventListener("canplaythrough", currentVideoListeners.canplaythrough);
+        video.removeEventListener("ended", currentVideoListeners.ended);
+        currentVideoListeners = null;
+      };
+
+      const setAutoplayForSlide = (index) => {
+        clearTimeout(autoplayTimer);
+
+        const slide = slides[index];
+        if (!slide) return;
+
+        const video = slide.querySelector("video");
+
+        if (video) {
+          clearVideoListeners(video);
+
+          video.pause();
+          video.currentTime = 0;
+
+          const onCanPlayThrough = () => {
+            video.play().catch(() => {});
+          };
+
+          const onEnded = () => {
+            swiper.slideNext();
+          };
+
+          video.addEventListener("canplaythrough", onCanPlayThrough, { once: true });
+          video.addEventListener("ended", onEnded, { once: true });
+
+          currentVideoListeners = {
+            canplaythrough: onCanPlayThrough,
+            ended: onEnded,
+          };
+        } else {
+          autoplayTimer = setTimeout(() => {
+            swiper.slideNext();
+          }, 5000);
+        }
+      };
+
+      setAutoplayForSlide(swiper.realIndex);
+
+      swiper.on("slideChange", () => {
+        setAutoplayForSlide(swiper.realIndex);
+      });
+    });
+  });
+</script> <!-- Swiper 스타일 --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"><div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden" data-astro-cid-5lkxcdsq> <div class="p-6" data-astro-cid-5lkxcdsq> <h3 class="text-xl font-semibold mb-4" data-astro-cid-5lkxcdsq>Bar(압구정)</h3> <div class="swiper mySwiper" data-astro-cid-5lkxcdsq> <div class="swiper-wrapper" data-astro-cid-5lkxcdsq> <div class="swiper-slide" key="/images/apgujeong_bar_01.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/apgujeong_bar_01.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div> <div class="swiper-slide" data-astro-cid-5lkxcdsq> <video muted playsinline class="w-full h-full object-contain aspect-[4/3] bg-black rounded-lg" data-astro-cid-5lkxcdsq> <source src="/images/apgujeong_bar_video.mp4" type="video/mp4" data-astro-cid-5lkxcdsq>
+Your browser does not support the video tag.
+</video> </div> </div> <!-- 버튼 --> <div class="swiper-button-next" data-astro-cid-5lkxcdsq></div> <div class="swiper-button-prev" data-astro-cid-5lkxcdsq></div> </div> </div> </div> <!-- 우클릭 방지 -->  <script type="module">
+  import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".mySwiper").forEach((el) => {
+      const swiper = new Swiper(el, {
+        loop: false, // ← 문제 생기면 true로 다시
+        navigation: {
+          nextEl: el.querySelector(".swiper-button-next"),
+          prevEl: el.querySelector(".swiper-button-prev"),
+        },
+        speed: 800,
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        allowTouchMove: false, // 휙휙 넘김 방지
+        autoplay: false,
+        observer: true,
+        observeParents: true,
+      });
+
+      const slides = el.querySelectorAll(".swiper-slide");
+
+      let autoplayTimer = null;
+      let currentVideoListeners = null;
+
+      const clearVideoListeners = (video) => {
+        if (!video || !currentVideoListeners) return;
+        video.removeEventListener("canplaythrough", currentVideoListeners.canplaythrough);
+        video.removeEventListener("ended", currentVideoListeners.ended);
+        currentVideoListeners = null;
+      };
+
+      const setAutoplayForSlide = (index) => {
+        clearTimeout(autoplayTimer);
+
+        const slide = slides[index];
+        if (!slide) return;
+
+        const video = slide.querySelector("video");
+
+        if (video) {
+          clearVideoListeners(video);
+
+          video.pause();
+          video.currentTime = 0;
+
+          const onCanPlayThrough = () => {
+            video.play().catch(() => {});
+          };
+
+          const onEnded = () => {
+            swiper.slideNext();
+          };
+
+          video.addEventListener("canplaythrough", onCanPlayThrough, { once: true });
+          video.addEventListener("ended", onEnded, { once: true });
+
+          currentVideoListeners = {
+            canplaythrough: onCanPlayThrough,
+            ended: onEnded,
+          };
+        } else {
+          autoplayTimer = setTimeout(() => {
+            swiper.slideNext();
+          }, 5000);
+        }
+      };
+
+      setAutoplayForSlide(swiper.realIndex);
+
+      swiper.on("slideChange", () => {
+        setAutoplayForSlide(swiper.realIndex);
+      });
+    });
+  });
+</script> <!-- Swiper 스타일 --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"><div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden" data-astro-cid-5lkxcdsq> <div class="p-6" data-astro-cid-5lkxcdsq> <h3 class="text-xl font-semibold mb-4" data-astro-cid-5lkxcdsq>museum DEEPDIVE(평창)</h3> <div class="swiper mySwiper" data-astro-cid-5lkxcdsq> <div class="swiper-wrapper" data-astro-cid-5lkxcdsq> <div class="swiper-slide" key="/images/pyeongchang_yongpyong_01.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/pyeongchang_yongpyong_01.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div><div class="swiper-slide" key="/images/pyeongchang_yongpyong_02.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/pyeongchang_yongpyong_02.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div><div class="swiper-slide" key="/images/pyeongchang_yongpyong_03.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/pyeongchang_yongpyong_03.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div>  </div> <!-- 버튼 --> <div class="swiper-button-next" data-astro-cid-5lkxcdsq></div> <div class="swiper-button-prev" data-astro-cid-5lkxcdsq></div> </div> </div> </div> <!-- 우클릭 방지 -->  <script type="module">
+  import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".mySwiper").forEach((el) => {
+      const swiper = new Swiper(el, {
+        loop: false, // ← 문제 생기면 true로 다시
+        navigation: {
+          nextEl: el.querySelector(".swiper-button-next"),
+          prevEl: el.querySelector(".swiper-button-prev"),
+        },
+        speed: 800,
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        allowTouchMove: false, // 휙휙 넘김 방지
+        autoplay: false,
+        observer: true,
+        observeParents: true,
+      });
+
+      const slides = el.querySelectorAll(".swiper-slide");
+
+      let autoplayTimer = null;
+      let currentVideoListeners = null;
+
+      const clearVideoListeners = (video) => {
+        if (!video || !currentVideoListeners) return;
+        video.removeEventListener("canplaythrough", currentVideoListeners.canplaythrough);
+        video.removeEventListener("ended", currentVideoListeners.ended);
+        currentVideoListeners = null;
+      };
+
+      const setAutoplayForSlide = (index) => {
+        clearTimeout(autoplayTimer);
+
+        const slide = slides[index];
+        if (!slide) return;
+
+        const video = slide.querySelector("video");
+
+        if (video) {
+          clearVideoListeners(video);
+
+          video.pause();
+          video.currentTime = 0;
+
+          const onCanPlayThrough = () => {
+            video.play().catch(() => {});
+          };
+
+          const onEnded = () => {
+            swiper.slideNext();
+          };
+
+          video.addEventListener("canplaythrough", onCanPlayThrough, { once: true });
+          video.addEventListener("ended", onEnded, { once: true });
+
+          currentVideoListeners = {
+            canplaythrough: onCanPlayThrough,
+            ended: onEnded,
+          };
+        } else {
+          autoplayTimer = setTimeout(() => {
+            swiper.slideNext();
+          }, 5000);
+        }
+      };
+
+      setAutoplayForSlide(swiper.realIndex);
+
+      swiper.on("slideChange", () => {
+        setAutoplayForSlide(swiper.realIndex);
+      });
+    });
+  });
+</script> <!-- Swiper 스타일 --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"><div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden" data-astro-cid-5lkxcdsq> <div class="p-6" data-astro-cid-5lkxcdsq> <h3 class="text-xl font-semibold mb-4" data-astro-cid-5lkxcdsq>오마카세(선릉)</h3> <div class="swiper mySwiper" data-astro-cid-5lkxcdsq> <div class="swiper-wrapper" data-astro-cid-5lkxcdsq> <div class="swiper-slide" key="/images/seolleung_omakase_01.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/seolleung_omakase_01.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div><div class="swiper-slide" key="/images/seolleung_omakase_02.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/seolleung_omakase_02.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div> <div class="swiper-slide" data-astro-cid-5lkxcdsq> <video muted playsinline class="w-full h-full object-contain aspect-[4/3] bg-black rounded-lg" data-astro-cid-5lkxcdsq> <source src="/images/seolleung_omakase_video.mp4" type="video/mp4" data-astro-cid-5lkxcdsq>
+Your browser does not support the video tag.
+</video> </div> </div> <!-- 버튼 --> <div class="swiper-button-next" data-astro-cid-5lkxcdsq></div> <div class="swiper-button-prev" data-astro-cid-5lkxcdsq></div> </div> </div> </div> <!-- 우클릭 방지 -->  <script type="module">
+  import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".mySwiper").forEach((el) => {
+      const swiper = new Swiper(el, {
+        loop: false, // ← 문제 생기면 true로 다시
+        navigation: {
+          nextEl: el.querySelector(".swiper-button-next"),
+          prevEl: el.querySelector(".swiper-button-prev"),
+        },
+        speed: 800,
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        allowTouchMove: false, // 휙휙 넘김 방지
+        autoplay: false,
+        observer: true,
+        observeParents: true,
+      });
+
+      const slides = el.querySelectorAll(".swiper-slide");
+
+      let autoplayTimer = null;
+      let currentVideoListeners = null;
+
+      const clearVideoListeners = (video) => {
+        if (!video || !currentVideoListeners) return;
+        video.removeEventListener("canplaythrough", currentVideoListeners.canplaythrough);
+        video.removeEventListener("ended", currentVideoListeners.ended);
+        currentVideoListeners = null;
+      };
+
+      const setAutoplayForSlide = (index) => {
+        clearTimeout(autoplayTimer);
+
+        const slide = slides[index];
+        if (!slide) return;
+
+        const video = slide.querySelector("video");
+
+        if (video) {
+          clearVideoListeners(video);
+
+          video.pause();
+          video.currentTime = 0;
+
+          const onCanPlayThrough = () => {
+            video.play().catch(() => {});
+          };
+
+          const onEnded = () => {
+            swiper.slideNext();
+          };
+
+          video.addEventListener("canplaythrough", onCanPlayThrough, { once: true });
+          video.addEventListener("ended", onEnded, { once: true });
+
+          currentVideoListeners = {
+            canplaythrough: onCanPlayThrough,
+            ended: onEnded,
+          };
+        } else {
+          autoplayTimer = setTimeout(() => {
+            swiper.slideNext();
+          }, 5000);
+        }
+      };
+
+      setAutoplayForSlide(swiper.realIndex);
+
+      swiper.on("slideChange", () => {
+        setAutoplayForSlide(swiper.realIndex);
+      });
+    });
+  });
+</script> <!-- Swiper 스타일 --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"><div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden" data-astro-cid-5lkxcdsq> <div class="p-6" data-astro-cid-5lkxcdsq> <h3 class="text-xl font-semibold mb-4" data-astro-cid-5lkxcdsq>TimeSquare(영등포)</h3> <div class="swiper mySwiper" data-astro-cid-5lkxcdsq> <div class="swiper-wrapper" data-astro-cid-5lkxcdsq> <div class="swiper-slide" key="/images/yeongdeungpo_timesquare_01.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/yeongdeungpo_timesquare_01.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div><div class="swiper-slide" key="/images/yeongdeungpo_timesquare_02.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/yeongdeungpo_timesquare_02.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div><div class="swiper-slide" key="/images/yeongdeungpo_timesquare_03.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/yeongdeungpo_timesquare_03.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div><div class="swiper-slide" key="/images/yeongdeungpo_timesquare_04.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/yeongdeungpo_timesquare_04.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div>  </div> <!-- 버튼 --> <div class="swiper-button-next" data-astro-cid-5lkxcdsq></div> <div class="swiper-button-prev" data-astro-cid-5lkxcdsq></div> </div> </div> </div> <!-- 우클릭 방지 -->  <script type="module">
+  import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".mySwiper").forEach((el) => {
+      const swiper = new Swiper(el, {
+        loop: false, // ← 문제 생기면 true로 다시
+        navigation: {
+          nextEl: el.querySelector(".swiper-button-next"),
+          prevEl: el.querySelector(".swiper-button-prev"),
+        },
+        speed: 800,
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        allowTouchMove: false, // 휙휙 넘김 방지
+        autoplay: false,
+        observer: true,
+        observeParents: true,
+      });
+
+      const slides = el.querySelectorAll(".swiper-slide");
+
+      let autoplayTimer = null;
+      let currentVideoListeners = null;
+
+      const clearVideoListeners = (video) => {
+        if (!video || !currentVideoListeners) return;
+        video.removeEventListener("canplaythrough", currentVideoListeners.canplaythrough);
+        video.removeEventListener("ended", currentVideoListeners.ended);
+        currentVideoListeners = null;
+      };
+
+      const setAutoplayForSlide = (index) => {
+        clearTimeout(autoplayTimer);
+
+        const slide = slides[index];
+        if (!slide) return;
+
+        const video = slide.querySelector("video");
+
+        if (video) {
+          clearVideoListeners(video);
+
+          video.pause();
+          video.currentTime = 0;
+
+          const onCanPlayThrough = () => {
+            video.play().catch(() => {});
+          };
+
+          const onEnded = () => {
+            swiper.slideNext();
+          };
+
+          video.addEventListener("canplaythrough", onCanPlayThrough, { once: true });
+          video.addEventListener("ended", onEnded, { once: true });
+
+          currentVideoListeners = {
+            canplaythrough: onCanPlayThrough,
+            ended: onEnded,
+          };
+        } else {
+          autoplayTimer = setTimeout(() => {
+            swiper.slideNext();
+          }, 5000);
+        }
+      };
+
+      setAutoplayForSlide(swiper.realIndex);
+
+      swiper.on("slideChange", () => {
+        setAutoplayForSlide(swiper.realIndex);
+      });
+    });
+  });
+</script> <!-- Swiper 스타일 --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"><div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden" data-astro-cid-5lkxcdsq> <div class="p-6" data-astro-cid-5lkxcdsq> <h3 class="text-xl font-semibold mb-4" data-astro-cid-5lkxcdsq>거리 가로등주(사북)</h3> <div class="swiper mySwiper" data-astro-cid-5lkxcdsq> <div class="swiper-wrapper" data-astro-cid-5lkxcdsq> <div class="swiper-slide" key="/images/sabuk_streetlight_01.jpg" data-astro-cid-5lkxcdsq> <img loading="lazy" decoding="async" src="/images/sabuk_streetlight_01.jpg" alt="Project image" class="w-full h-full object-contain aspect-[4/3] bg-white rounded-lg" data-astro-cid-5lkxcdsq> </div>  </div> <!-- 버튼 --> <div class="swiper-button-next" data-astro-cid-5lkxcdsq></div> <div class="swiper-button-prev" data-astro-cid-5lkxcdsq></div> </div> </div> </div> <!-- 우클릭 방지 -->  <script type="module">
+  import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".mySwiper").forEach((el) => {
+      const swiper = new Swiper(el, {
+        loop: false, // ← 문제 생기면 true로 다시
+        navigation: {
+          nextEl: el.querySelector(".swiper-button-next"),
+          prevEl: el.querySelector(".swiper-button-prev"),
+        },
+        speed: 800,
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        allowTouchMove: false, // 휙휙 넘김 방지
+        autoplay: false,
+        observer: true,
+        observeParents: true,
+      });
+
+      const slides = el.querySelectorAll(".swiper-slide");
+
+      let autoplayTimer = null;
+      let currentVideoListeners = null;
+
+      const clearVideoListeners = (video) => {
+        if (!video || !currentVideoListeners) return;
+        video.removeEventListener("canplaythrough", currentVideoListeners.canplaythrough);
+        video.removeEventListener("ended", currentVideoListeners.ended);
+        currentVideoListeners = null;
+      };
+
+      const setAutoplayForSlide = (index) => {
+        clearTimeout(autoplayTimer);
+
+        const slide = slides[index];
+        if (!slide) return;
+
+        const video = slide.querySelector("video");
+
+        if (video) {
+          clearVideoListeners(video);
+
+          video.pause();
+          video.currentTime = 0;
+
+          const onCanPlayThrough = () => {
+            video.play().catch(() => {});
+          };
+
+          const onEnded = () => {
+            swiper.slideNext();
+          };
+
+          video.addEventListener("canplaythrough", onCanPlayThrough, { once: true });
+          video.addEventListener("ended", onEnded, { once: true });
+
+          currentVideoListeners = {
+            canplaythrough: onCanPlayThrough,
+            ended: onEnded,
+          };
+        } else {
+          autoplayTimer = setTimeout(() => {
+            swiper.slideNext();
+          }, 5000);
+        }
+      };
+
+      setAutoplayForSlide(swiper.realIndex);
+
+      swiper.on("slideChange", () => {
+        setAutoplayForSlide(swiper.realIndex);
+      });
+    });
+  });
+</script></div> </div> </section> <section id="features" class="flex scroll-mt-24 flex-col items-center gap-4 space-y-8"> <div class="flex flex-col items-center gap-4">  <h2 class="text-3xl md:text-4xl font-bold text-center mb-4"> Why Choose FIKO? </h2> </div> <p class="max-w-xl text-center text-gray-600 text-base">  </p>  <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"> <li class="flex flex-col items-center gap-3 p-4 border border-gray-200 rounded-md hover:shadow-md transition-shadow duration-300"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lightbulb" aria-hidden="true"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path><path d="M9 18h6"></path><path d="M10 22h4"></path></svg> <p class="text-center font-bold text-base">고품질 광섬유 조명 시공</p> <p class="text-center text-gray-600 text-xs break-keep leading-snug whitespace-normal">감각적인 공간 연출을 위한 인테리어용 광섬유 조명 설계 및 시공</p> </li><li class="flex flex-col items-center gap-3 p-4 border border-gray-200 rounded-md hover:shadow-md transition-shadow duration-300"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-building" aria-hidden="true"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"></rect><path d="M9 22v-4h6v4"></path><path d="M8 6h.01"></path><path d="M16 6h.01"></path><path d="M12 6h.01"></path><path d="M12 10h.01"></path><path d="M12 14h.01"></path><path d="M16 10h.01"></path><path d="M16 14h.01"></path><path d="M8 10h.01"></path><path d="M8 14h.01"></path></svg> <p class="text-center font-bold text-base">상업 공간 인테리어 전문</p> <p class="text-center text-gray-600 text-xs break-keep leading-snug whitespace-normal">호텔, 클리닉, 레스토랑 등 공간 성격에 맞춘 감각적인 시공</p> </li><li class="flex flex-col items-center gap-3 p-4 border border-gray-200 rounded-md hover:shadow-md transition-shadow duration-300"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cpu" aria-hidden="true"><path d="M12 20v2"></path><path d="M12 2v2"></path><path d="M17 20v2"></path><path d="M17 2v2"></path><path d="M2 12h2"></path><path d="M2 17h2"></path><path d="M2 7h2"></path><path d="M20 12h2"></path><path d="M20 17h2"></path><path d="M20 7h2"></path><path d="M7 20v2"></path><path d="M7 2v2"></path><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="8" y="8" width="8" height="8" rx="1"></rect></svg> <p class="text-center font-bold text-base">스마트 조명 &amp; 전기 설비</p> <p class="text-center text-gray-600 text-xs break-keep leading-snug whitespace-normal">맞춤형 조명 설계 및 안전한 전기 시스템 시공</p> </li><li class="flex flex-col items-center gap-3 p-4 border border-gray-200 rounded-md hover:shadow-md transition-shadow duration-300"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles" aria-hidden="true"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path><path d="M20 2v4"></path><path d="M22 4h-4"></path><circle cx="4" cy="20" r="2"></circle></svg> <p class="text-center font-bold text-base">현장 기반 제안력</p> <p class="text-center text-gray-600 text-xs break-keep leading-snug whitespace-normal">수십 건의 시공 경험을 바탕으로 실용적이고 창의적인 제안</p> </li><li class="flex flex-col items-center gap-3 p-4 border border-gray-200 rounded-md hover:shadow-md transition-shadow duration-300"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-camera" aria-hidden="true"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"></path><circle cx="12" cy="13" r="3"></circle></svg> <p class="text-center font-bold text-base">시공 전·후 비교 관리</p> <p class="text-center text-gray-600 text-xs break-keep leading-snug whitespace-normal">디테일한 시공 기록과 철저한 품질 관리</p> </li><li class="flex flex-col items-center gap-3 p-4 border border-gray-200 rounded-md hover:shadow-md transition-shadow duration-300"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-badge-check" aria-hidden="true"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"></path><path d="m9 12 2 2 4-4"></path></svg> <p class="text-center font-bold text-base">신뢰와 품질 보증</p> <p class="text-center text-gray-600 text-xs break-keep leading-snug whitespace-normal">체계적인 프로세스와 지속적인 사후관리</p> </li> </ul>  </section> <section id="compatibility" class="py-16 bg-white text-black text-center max-w-3xl mx-auto px-4"> <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center">Our Vision</h2> <p class="text-md leading-snug whitespace-pre-line">
+우리는 빛을 통해 공간의 가치를 혁신하고 고객과 함께 성장하는 미래를 만들어갑니다.
+    고객 한 분 한 분의 이야기에 귀 기울여 맞춤형 조명 솔루션을 제공하며,
+    지속 가능한 기술과 창의적 디자인으로 세상을 밝히는 선도적인 조명 기업이 되겠습니다.
+</p> </section> </div> </main> </body></html>
