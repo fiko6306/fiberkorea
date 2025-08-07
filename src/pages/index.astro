@@ -1,0 +1,51 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Splash from '~/components/splash.astro';
+import Intro from '~/components/intro.astro';
+import Features from '~/components/features.astro';
+import Compatibility from '~/components/compatibility.astro';
+import Showcase from '~/components/showcase.astro';
+import Footer from '~/components/footer.astro';
+import Projects from '../components/Projects.astro';
+
+// ✅ global.css도 여기에 포함
+import '../styles/tailwind.css';
+---
+
+<Layout>
+  <!-- 1. 최상단 히어로 영역 -->
+  <Splash />
+
+  <section id="about" class="py-16 bg-gray-100 text-gray-800">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-4">About FIKO</h2>
+      <p class="text-gray-700 mb-8">30년 경력의 조명 설계 전문 기업</p>
+      <div class="flex items-center justify-center mb-8">
+        <div class="text-left text-sm leading-relaxed space-y-3 max-w-md">
+          <p><strong class="font-semibold">사무실 :</strong> 서울특별시 은평구 갈현동 541-1 건영APT 상가1호</p>
+          <p><strong class="font-semibold">공장 :</strong> 경기도 고양시 삼원로63, F408호 고양아크비즈</p>
+          <p>
+            |&nbsp; <strong class="font-semibold">Tel:</strong> 02-385-3003 &nbsp;|&nbsp; 
+            <strong class="font-semibold">Fax:</strong> 02-385-3005 &nbsp;
+            <br>|&nbsp; <strong class="font-semibold">Hp:</strong> 010-4924-4265
+          </p>
+          <p>
+            <strong class="font-semibold">Web</strong> 
+            <br><a href="http://www.fiko.co.kr" class="text-blue-600 underline hover:text-blue-800">
+              www.fiko.co.kr
+              <br>https://blog.naver.com/fiko
+              <br>www.youtube.com/@fiberkorea
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. 그 외 섹션들 (Projects, Features, ...) -->
+  <div class="space-y-24 px-8 py-32">
+    <Projects />
+    <Features />
+    <Compatibility />
+  </div>
+

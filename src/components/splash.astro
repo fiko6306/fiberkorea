@@ -1,0 +1,58 @@
+---
+import { Image } from "astro:assets";
+import astronautImage from "~/assets/astronaut.png";
+import Starfield from "~/components/starfield.astro";
+---
+
+<section class="relative h-screen bg-black text-white overflow-hidden">
+  <Starfield />
+  <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
+    <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">
+      Light that shapes the space
+    </h1>
+    <p class="mt-4 text-lg md:text-xl text-gray-300">
+      FIKO는 공간을 설계하는 빛의 기술입니다.
+    </p>
+    <div class="mt-8 flex gap-4">
+      <a href="#about" class="bg-white text-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+        About us
+      </a>
+      <a href="#projects" class="border border-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-black transition">
+        Projects
+      </a>
+    </div>
+  </div>
+ 
+  <div class="absolute bottom-0 left-0 w-1/2 max-w-xl">
+    <Image
+      class="w-full h-auto object-contain float-anim"
+      src={astronautImage}
+      widths={[450, 800]}
+      sizes="(min-width: 640px) 50vw, 100vw"
+      loading="eager"
+      alt="A floating astronaut in a space suit"
+    />
+  </div>
+</section>
+
+<section id="features" class="py-20 bg-white text-black text-center">
+  <h2 class="text-3xl md:text-4xl font-bold mb-4">What we do</h2>
+  <p class="text-gray-600 mb-12">디자인과 기술을 결합한 조명 솔루션</p>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-10 px-6 max-w-5xl mx-auto">
+    <div>
+      <h3 class="text-xl font-semibold">Fiber Lighting</h3>
+      <p class="text-gray-500 mt-2">광섬유 조명 설계 및 시공</p>
+    </div>
+    <div>
+      <h3 class="text-xl font-semibold">Digital Signage</h3>
+      <p class="text-gray-500 mt-2">상황판, 디지털 계통도</p>
+    </div>
+    <div>
+      <h3 class="text-xl font-semibold">Custom Projects</h3>
+      <p class="text-gray-500 mt-2">주문제작 / 전시관 / 테마연출</p>
+    </div>
+    <div>
+      <h3 class="text-xl font-semibold">Maintenance</h3>
+      <p class="text-gray-500 mt-2">유지보수 및 리노베이션</p>
+    </div>
+  </div>

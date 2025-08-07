@@ -1,0 +1,32 @@
+---
+import Header from '../components/header.astro';
+import Footer from '../components/footer.astro';
+---
+
+<!DOCTYPE html>
+<html lang="ko" class="h-full" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FIKO CO.,LTD</title>
+
+    <!-- Noto Sans KR 웹폰트 (한글용) -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet" />
+
+    <!-- Montserrat 웹폰트 (영문용) -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  </head>
+  <body
+    class="h-full overflow-x-hidden bg-default text-default text-base font-sans selection:bg-secondary selection:text-white"
+    style="font-family: 'Noto Sans KR', 'Montserrat', sans-serif;"
+  >
+    <Header />
+    <main>
+      <slot />
+    </main>
+   
+  </body>
+</html>
+
